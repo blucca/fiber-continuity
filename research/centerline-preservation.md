@@ -26,7 +26,7 @@ multiple centerlines and incoming directions during tracing.
 
 [`junction-link-probe.py`](junction-link-probe.py) retains the fixed spline seeds
 and scores cubic Hermite joins with incoming tangents and full family-plus-
-intersection probability. Fixed settings: radius12 vox, tangent support8,
+intersection probability. Fixed settings: radius 12 vox, tangent support 8,
 cosine≥0.94, probability tenth percentile≥0.65, reciprocal score margin≥0.10.
 The function reads curves and probabilities; labels are reserved for evaluation.
 The executable synthetic check needs NumPy and SciPy:
@@ -36,9 +36,9 @@ python -m pip install numpy scipy
 python research/junction-link-probe.py
 ```
 
-The real development run accepted22 of24 admitted candidate pairs. Whole run,
+The real development run accepted 22 of 24 admitted candidate pairs. Whole run,
 including four metric evaluations: 9.941 s on two CPU cores, peak RSS407.66 MiB.
-Default cleanup remains the upstream45°/100-vox/16-vox configuration.
+Default cleanup remains the upstream 45°/100-vox/16-vox configuration.
 
 | Radius | Output | Manual coverage | Same-chain continuity | Observed interior/boundary switches |
 |---:|---|---:|---:|---:|
@@ -51,16 +51,16 @@ Default cleanup remains the upstream45°/100-vox/16-vox configuration.
 |3|MLP extended-clean|0.418161|0.276466|0/0|
 |3|short-junction clean|0.420551|0.274951|0/0|
 
-At radius2, short-junction raw output has5437.077 sustained supported vox,
-12950.560 unknown vox and89 eligible chains. Clean output has4078.352 supported
-vox,6964.377 unknown vox and44 eligible chains. At radius3 the corresponding
-raw/clean support is8287.946/6307.022vox and unknown10291.553/4871.928vox.
+At radius2, short-junction raw output has 5437.077 sustained supported vox,
+12,950.560 unknown vox and 89 eligible chains. Clean output has 4078.352 supported
+vox, 6964.377 unknown vox and 44 eligible chains. At radius 3 the corresponding
+raw/clean support is 8287.946/6307.022 vox and unknown 10291.553/4871.928 vox.
 Observed switches apply to sustained annotated support; the unknown arcs remain
 separate. This table covers one fixed development setting.
 
 **Decision: stop expanding endpoint-only join parameters.** After default
 cleanup, same-chain continuity is below the learned baseline at both radii;
-coverage gains are0.122/0.239 percentage points. The next experiment is
+coverage gains are 0.122/0.239 percentage points. The next experiment is
 probability-conditioned centerline tracking inside the original CT, with
 incoming-direction preservation, explicit competing paths and the shared
 connection/coverage evaluator. Matched-coverage comparisons and frozen s1
