@@ -10,7 +10,7 @@ coverage and observed connection errors.
 
 Built around repeatable fixed-model spline measurements and original manual
 graphs. The [centerline-preservation study](research/centerline-preservation.md)
-tracks the next tracing experiments and the measured behavior of a short-junction probe.
+tracks the measured behavior of a short-junction probe. The [incoming-direction study](research/incoming-direction-study.md) adds bounded CT recentering, a reverse-flow gate and a complete development augmentation.
 
 ## Run in minutes
 
