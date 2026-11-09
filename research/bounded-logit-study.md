@@ -1,13 +1,14 @@
 # Bounded logit-plus-CT recentering: development freeze
 
-The frozen main method retains the mature spline/MLP curve topology and
+The complete main method includes unchanged native cleanup and retains
+the mature spline/MLP curve topology while its raw operator
 recentres within 1.5 vox using logit probability plus normalized CT contrast.
 On s5, the radius 2 matched-below raw prefix improves same-chain continuity
 by 9.76%; the matched-below clean prefix improves it by 2.75%.
 Radius 3 on those same prefixes has lower coverage; its clean continuity
-also decreases. This publication freezes the method before the first s1
-coverage/connectivity evaluation. Added-flow / ownership / native-augmentation
-results remain in the [separate side study](overlap-ownership-study.md).
+also decreases. The original publication froze the method before the first s1
+coverage/connectivity evaluation; the completed postprocessor holdout appears
+below. Added-flow / ownership / native-augmentation results remain in the [separate side study](overlap-ownership-study.md).
 
 ## Input and score scale
 
@@ -125,13 +126,24 @@ The probability-only lower brackets improve radius 2 continuity to 0.207709
 the selected main configuration. Radius 3 clean 55 has continuity 0.273525
 versus baseline 0.276466. Controls and radius sensitivity remain explicit.
 
+## FP32 predictor input reproduction
+
+The measured input is the four-channel float32 side output before native uint8
+rounding. Quantized native-u8 variant evaluations: 0.
+[The input-reproduction card](float-input-reproduction.md) supplies pinned model
+and source identities, exact normalization/window blending, the 74-line
+[float-export patch](native-predict-float.patch), a standard-library
+[application utility](apply_native_float_patch.py), and the model/export command.
+These publish the already-measured adapter; method parameters remain unchanged.
+
 ## Run the published generation and small checks
 
 [`logit_maps.py`](logit_maps.py) supplies both score maps.
 [`bounded_logit_recenter.py`](bounded_logit_recenter.py) exposes the complete
 fixed-topology raw generation primitive and CLI. The default mode is the
 frozen `ct-energy-control`; `--mode probability-only` runs its causal control.
-Upstream native cleanup is a subsequent stage.
+Unchanged upstream native cleanup is the required delivery stage after this
+raw operator; raw deployment is stopped by the heldout switch-count result below.
 
 ```bash
 python -m pip install numpy scipy
@@ -148,13 +160,131 @@ counts, and incomplete transverse context. Published source uses the measured
 score and geometry rules; real CT/probability/reference geometry is kept in
 research caches. Source/data attribution and licensing follow the main README.
 
-## Freeze and next validation
+## First s1 postprocessor parameter holdout
 
-This main configuration is frozen after the completed s5 controls and matched
-comparison, before the first s1 coverage/connectivity measurement. The frozen
-method keeps the original mature geometry as its topology anchor; new flow,
-ownership and native-link augmentation are excluded from that recipe.
-Same-chain improvements apply to the measured s5/radius 2 scope; s1 is the
-next frozen-method evaluation. Method superiority, external adoption and
-awards have each recorded 0 at this development freeze. Surface fitting,
-flattening and VC3D rendering remain subsequent native-consumer checkpoints.
+The method and operating-point protocol were frozen on s5. The immutable
+[freeze commit `f88e889`](https://github.com/blucca/fiber-continuity/tree/f88e8894fa7dad1a56f670796f893a6793618faa)
+was pushed at **2026-11-09 23:23:21 UTC**, and its public source acceptance
+completed at **23:24:25 UTC**. The first s1 reference evaluation began at
+**23:24:48 UTC** and completed at **23:28:04 UTC**. Heldout case evaluations: 1;
+postprocessor parameter tuning on s1: 0. The selected primary remained
+`ct-energy-control`; the probability-only mode remained its causal control.
+The pretrained model's plans report 18 training cases; original case membership
+remains a separate provenance field. This is a postprocessor parameter holdout.
+
+The s1 cube has the same 7.91 µm lattice and its original manual graph.
+Visible manual arc is 25,213.810 vox and the visible-reference continuity
+ceiling is 0.9937939376. Radius 2 is primary; radius 3 uses the same radius 2
+matched prefixes. Known sustained support, unknown/unannotated arc and
+ambiguous-between-trees arc each retain their exact metric field below.
+
+### Complete s1 outputs
+
+| Mode / stage / bracket | Curves | Radius | C | Continuity | Interior / boundary switches | Known sustained arc (vox) | Unknown arc (vox) | Ambiguous arc (vox) |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| baseline / raw | 330 | 2 | 0.536871 | 0.278677 | 3 / 0 | 10541.497 | 10088.046 | 1050.062 |
+| baseline / raw | 330 | 3 | 0.714958 | 0.476316 | 4 / 0 | 14218.709 | 6494.021 | 1180.819 |
+| probability-only / raw | 330 | 2 | 0.539110 | 0.292110 | 4 / 0 | 10507.356 | 10257.124 | 1041.817 |
+| probability-only / raw | 330 | 3 | 0.710087 | 0.467454 | 6 / 0 | 14088.181 | 6759.504 | 1162.053 |
+| ct-energy-control / raw | 330 | 2 | 0.540039 | 0.293184 | 4 / 0 | 10438.591 | 10284.917 | 1073.241 |
+| ct-energy-control / raw | 330 | 3 | 0.711934 | 0.469980 | 6 / 0 | 14153.116 | 6752.363 | 1189.640 |
+| baseline / clean | 75 | 2 | 0.404060 | 0.230280 | 3 / 0 | 8119.264 | 5383.728 | 828.990 |
+| baseline / clean | 75 | 3 | 0.528714 | 0.405083 | 3 / 0 | 10748.175 | 2791.189 | 916.081 |
+| probability-only / clean | 76 | 2 | 0.408031 | 0.238897 | 4 / 0 | 8132.526 | 5542.873 | 813.610 |
+| probability-only / clean | 76 | 3 | 0.529312 | 0.402731 | 4 / 0 | 10747.709 | 2976.621 | 894.974 |
+| ct-energy-control / clean | 77 | 2 | 0.410613 | 0.245712 | 3 / 0 | 8141.998 | 5583.282 | 824.389 |
+| ct-energy-control / clean | 77 | 3 | 0.534965 | 0.408036 | 3 / 0 | 10887.326 | 2937.673 | 908.551 |
+
+The full CT-clean output has 77 curves: r2 C 0.410613 / continuity 0.245712,
+versus the 75-curve mature clean baseline 0.404060 / 0.230280. Both have
+3 interior / 0 boundary observed switches. At r3, full CT-clean gives
+0.534965 / 0.408036 versus 0.528714 / 0.405083, again 3 / 0 versus 3 / 0.
+
+**Raw deployment is stopped.** CT raw has 4 observed interior switches versus
+baseline 3 at r2, and 6 versus 4 at r3. The probability-only raw control has
+the same increased switch counts. Published raw generation is an intermediate
+stage; unchanged native cleanup 45° / minimum 100 / black 16 is a required
+part of the complete delivery recipe.
+
+### Matched coverage: primary CT control
+
+Whole-curve length-descending / stable-ID prefixes bracket pairwise common
+manual coverage at radius 2, then the same prefix is measured at radius 3.
+The mature baseline values remain those in the full-output table.
+
+| Mode / stage / bracket | Curves | Radius | C | Continuity | Interior / boundary switches | Known sustained arc (vox) | Unknown arc (vox) | Ambiguous arc (vox) |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| CT / raw / below | 305 | 2 | 0.536664 | 0.293061 | 4 / 0 | 10429.636 | 10122.352 | 1069.013 |
+| CT / raw / below | 305 | 3 | 0.707347 | 0.469857 | 6 / 0 | 14089.368 | 6615.281 | 1182.495 |
+| CT / raw / above | 306 | 2 | 0.537088 | 0.293061 | 4 / 0 | 10429.636 | 10126.220 | 1069.013 |
+| CT / raw / above | 306 | 3 | 0.707925 | 0.469857 | 6 / 0 | 14099.466 | 6615.281 | 1182.495 |
+| CT / clean / below | 74 | 2 | 0.403873 | 0.239840 | 3 / 0 | 8000.031 | 5444.603 | 824.389 |
+| CT / clean / below | 74 | 3 | 0.524463 | 0.398665 | 3 / 0 | 10638.092 | 2884.594 | 908.551 |
+| CT / clean / above | 75 | 2 | 0.404926 | 0.240611 | 3 / 0 | 8019.039 | 5519.145 | 824.389 |
+| CT / clean / above | 75 | 3 | 0.527234 | 0.400892 | 3 / 0 | 10704.916 | 2919.069 | 908.551 |
+
+The clean 74-curve lower bracket gives **C 0.403873 / continuity 0.239840**
+versus baseline **0.404060 / 0.230280**, a **4.15%** continuity increase.
+The 75-curve upper bracket gives **0.404926 / 0.240611** (+4.49%).
+Observed counts remain 3 interior / 0 boundary for candidate and baseline.
+Together with the s5 clean lower-bracket gain of 2.75%, these results support
+a clean-stage radius 2 continuous-arc increment across the two measured volumes.
+Observed error-count reduction is 0.
+
+**Radius 3 sensitivity:** the same 74/75 clean prefixes give continuity
+0.398665 / 0.400892 versus baseline 0.405083. Their coverages
+0.524463 / 0.527234 are lower than 0.528714. The positive matched-clean
+increment is confined to the primary radius 2 scope; the radius 3 matched-clean
+continuity change is negative.
+
+### Probability-only causal control
+
+| Mode / stage / bracket | Curves | Radius | C | Continuity | Interior / boundary switches | Known sustained arc (vox) | Unknown arc (vox) | Ambiguous arc (vox) |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|
+| P-only / raw / below | 309 | 2 | 0.536482 | 0.291840 | 4 / 0 | 10488.764 | 10123.936 | 1037.590 |
+| P-only / raw / below | 309 | 3 | 0.706057 | 0.467067 | 6 / 0 | 14042.534 | 6648.894 | 1154.908 |
+| P-only / raw / above | 310 | 2 | 0.536983 | 0.291840 | 4 / 0 | 10498.401 | 10123.936 | 1037.590 |
+| P-only / raw / above | 310 | 3 | 0.706636 | 0.467067 | 6 / 0 | 14052.171 | 6648.894 | 1154.908 |
+| P-only / clean / below | 73 | 2 | 0.401018 | 0.235176 | 4 / 0 | 7980.208 | 5408.404 | 813.610 |
+| P-only / clean / below | 73 | 3 | 0.518975 | 0.393484 | 4 / 0 | 10498.629 | 2920.895 | 894.974 |
+| P-only / clean / above | 74 | 2 | 0.404605 | 0.237115 | 4 / 0 | 8067.504 | 5423.477 | 813.610 |
+| P-only / clean / above | 74 | 3 | 0.522942 | 0.397451 | 4 / 0 | 10593.276 | 2928.617 | 894.974 |
+
+Its full and matched clean outputs retain 4 interior switches versus baseline 3;
+its control role and the frozen CT primary remain explicit.
+
+### Which clean events changed
+
+A read-only review of the saved baseline-clean, CT-clean and matched-clean
+metric/prediction JSON mapped each event to its original raw source curve.
+At both radii, the baseline and CT totals are 3 interior / 0 boundary, with
+**2 shared tree-ID pairs, 1 baseline-only pair and 1 CT-only pair**. The two
+shared events retain their source lineage; the baseline-only and CT-only
+events occur on different original sources. The 74/75 matched CT prefixes
+contain the same three event pairs as full CT-clean. The event composition
+changes while its total remains 3 / 3. This review performs 0 new metric calls,
+0 geometry generation and 0 parameter selection. Published event information
+is aggregate; real geometry and event anchors remain in research caches.
+
+### State-field separation for clean outputs
+
+`known_tree` includes short known runs; `sustained_known_tree` includes runs
+meeting the fixed 8-vox support threshold. Unknown and ambiguous states remain
+separate from both:
+
+| Clean output | Radius | Known arc incl. short (vox) | Sustained known arc (vox) | Short known support (vox) | Unknown arc (vox) | Ambiguous arc (vox) |
+|---|---:|---:|---:|---:|---:|---:|
+| baseline full | 2 | 8370.379 | 8119.264 | 251.115 | 5383.728 | 828.990 |
+| CT full | 2 | 8522.787 | 8141.998 | 380.788 | 5583.282 | 824.389 |
+| CT below | 2 | 8359.153 | 8000.031 | 359.123 | 5444.603 | 824.389 |
+| CT above | 2 | 8385.910 | 8019.039 | 366.871 | 5519.145 | 824.389 |
+| baseline full | 3 | 10875.827 | 10748.175 | 127.652 | 2791.189 | 916.081 |
+| CT full | 3 | 11084.235 | 10887.326 | 196.909 | 2937.673 | 908.551 |
+| CT below | 3 | 10835.001 | 10638.092 | 196.909 | 2884.594 | 908.551 |
+| CT above | 3 | 10901.825 | 10704.916 | 196.909 | 2919.069 | 908.551 |
+
+The reported gain is annotated same-chain continuity. Observed switch counts
+use known sustained support; the tables preserve the accompanying unknown
+and ambiguous arc and the connection-event totals. Method superiority, external adoption and awards each
+remain 0. Surface fitting, flattening and VC3D rendering remain subsequent
+native-consumer checkpoints.

@@ -12,8 +12,10 @@ Built around repeatable fixed-model spline measurements and original manual
 graphs. The [centerline-preservation study](research/centerline-preservation.md)
 tracks the measured behavior of a short-junction probe. The [incoming-direction study](research/incoming-direction-study.md) adds bounded CT recentering, a reverse-flow gate and a complete development augmentation.
 
-The [bounded-logit study](research/bounded-logit-study.md) freezes the new
-fixed-topology main method before s1 evaluation. The [overlap-ownership study](research/overlap-ownership-study.md)
+The [bounded-logit study](research/bounded-logit-study.md) records the frozen
+fixed-topology method and its completed first s1 postprocessor holdout. Native
+cleanup is required: clean radius 2 matched continuity improves, while raw
+observed switches increase. The [overlap-ownership study](research/overlap-ownership-study.md)
 records geometry-only ranking, emitted-reverse scope and the complete native
 augmentation side-study results.
 
@@ -128,12 +130,20 @@ are reported separately. Default cleanup used 45° joins, 100-vox minimum length
 and 16-vox exterior-black distance. Prediction inputs were CT and fixed model
 probabilities; manual annotations supplied the evaluation reference.
 
-s1 (`s1_00497_02497_02997_256`) connectivity and coverage measurements remain
-**uninspected**, reserved for the new tracer after its parameters are frozen.
-The pretrained model's plans report 18 training cases; cube-level training
-membership awaits the original split. This heldout designation applies to
-new-tracer parameter selection. Native VC3D replay is a separate protocol;
-its execution count in this snapshot is 0.
+s1 (`s1_00497_02497_02997_256`) connectivity and coverage are now **inspected**
+through the first postprocessor parameter holdout, after the immutable
+[`f88e889` method freeze](https://github.com/blucca/fiber-continuity/tree/f88e8894fa7dad1a56f670796f893a6793618faa).
+Parameter tuning on s1: 0. At radius 2, CT-primary clean matched-below continuity
+is **0.239840** versus **0.230280** (+4.15%), with coverage 0.403873 versus
+0.404060 and observed interior switches 3 versus 3. Two event pairs persist;
+one baseline-only and one CT-only pair change the composition. Raw deployment
+is stopped: r2 observed switches 4 versus 3, r3 6 versus 4. Radius 3 matched-clean
+coverage and continuity decrease; full, matched, unknown and ambiguous totals
+are in the [complete study](research/bounded-logit-study.md#first-s1-postprocessor-parameter-holdout).
+The pretrained model's 18 training cases and their original membership remain
+separate provenance; the heldout protocol concerns the postprocessor parameters.
+Historical research notes retain their publication snapshots. Native VC3D replay
+is a separate protocol; its execution count here is 0.
 
 ## Version, data license and attribution
 
@@ -143,6 +153,8 @@ The main branch publishes this evaluator, its NML converter, synthetic checks
 and the aggregate baseline above. Model inference and CT intake use the linked
 upstream research tools. The standalone repository is the early public
 artifact; the upstream human-written PR route remains stopped.
+
+Predictor input reproduction: [FP32 four-channel export](research/float-input-reproduction.md).
 
 Code and synthetic examples: [MIT](LICENSE). Data: the
 [Vesuvius Challenge Data License](https://dl.ash2txt.org/LICENSE.txt), which
