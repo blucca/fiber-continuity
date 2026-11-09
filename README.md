@@ -8,9 +8,9 @@ edges, and partial annotations stay intact. A tracer can cover a fiber with many
 fragments; the continuity column makes that fragmentation visible alongside
 coverage and observed connection errors.
 
-Early public research snapshot, 2026-11-10. The evaluator and real fixed-model
-spline baseline measurements are complete. A new tracer is under research;
-measured new-tracer results, observed adoption, and prize signals are currently 0.
+Built around repeatable fixed-model spline measurements and original manual
+graphs. The [centerline-preservation study](research/centerline-preservation.md)
+tracks the next tracing experiments and the measured behavior of a short-junction probe.
 
 ## Run in minutes
 
@@ -102,8 +102,8 @@ Ambiguous-between-trees arc is 0 vox in all six rows. Eligible chains contain at
 least one contiguous known-tree support run of ≥8 vox. The zero observed
 switches describe those supported arcs; unknown/unannotated arcs retain their
 separate totals. Compare methods at matched manual coverage, then compare
-interior switches and same-chain continuity. This snapshot reports measured
-baseline behavior; the new-tracer comparison follows its research phase.
+interior switches and same-chain continuity. The [research note](research/centerline-preservation.md) adds the first fixed
+development probe; matched-coverage and frozen-tracer validation are the next checkpoints.
 
 **Baseline provenance.** The mature spline/catalog/MLP extension/cleanup method
 is [ScrollPrize/villa@c3d9da6fe42c3bb46fd2603ca060845d843296c3](https://github.com/ScrollPrize/villa/tree/c3d9da6fe42c3bb46fd2603ca060845d843296c3),
