@@ -61,8 +61,8 @@ At radius2, default-clean augmentation has 7,757.204 sustained-supported vox,
 12,260.386 unknown/unannotated vox and 83 eligible chains. The baseline has
 4,041.766 / 6,958.827 vox and 44 eligible chains. These full-output rows compare
 both additional geometry and additional coverage. Whole-curve longest-first
-matched-coverage brackets are the next comparison checkpoint. s1 remains
-reserved for the complete frozen method.
+matched-coverage brackets are recorded below. s1 remains reserved for the
+complete frozen method.
 
 The completed recipe/control/evaluation run takes 46.265 s on two CPU cores,
 peak RSS462.715 MiB. Passing the clean geometry through the pinned native
@@ -92,3 +92,28 @@ remain in research caches. Manual annotations supply evaluation and diagnosis;
 score generation and reverse filtering receive predictions and CT/probability
 arrays. The pretrained model's training membership remains a separate property
 from the new tracer's s5/s1 parameter-selection protocol.
+
+## Matched-coverage checkpoint
+
+Longest-first whole-curve prefixes bracket the frozen radius2 baseline coverage.
+Every row retains zero observed interior/boundary switches.
+
+| Stage / prefix count | Candidate r2 coverage | Baseline r2 coverage | Candidate continuity | Baseline continuity |
+|---|---:|---:|---:|---:|
+|raw / 132|0.380281|0.381040|0.199477|0.195376|
+|raw / 133|0.381434|0.381040|0.199477|0.195376|
+|clean / 56|0.276487|0.278677|0.136437|0.160557|
+|clean / 57|0.279233|0.278677|0.138959|0.160557|
+
+Raw continuity gains 2.10% at slightly lower coverage. Default-clean longest-first
+selection loses continuity at the matched radius2 operating point. Radius3 uses
+these same prefixes: raw continuity0.331255 versus0.336138, with candidate
+coverage0.528936 versus0.564750; the clean prefixes also have lower radius3
+coverage and continuity. This normalization takes55.407s, peak RSS122.301MiB.
+
+The next mechanism is overlap-aware candidate ownership and selection. At the
+clean matched bracket, sustained-supported predicted arc is5,602.834vox versus
+baseline4,041.766vox despite similar unique manual coverage: repeated coverage
+of the same annotated fibers consumes the candidate budget. The current raw
+method, its native catalog intake and the clean selection result stay separate
+checkpoints. A deployable clean operating point precedes frozen s1 evaluation.
