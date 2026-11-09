@@ -12,6 +12,11 @@ Built around repeatable fixed-model spline measurements and original manual
 graphs. The [centerline-preservation study](research/centerline-preservation.md)
 tracks the measured behavior of a short-junction probe. The [incoming-direction study](research/incoming-direction-study.md) adds bounded CT recentering, a reverse-flow gate and a complete development augmentation.
 
+The [bounded-logit study](research/bounded-logit-study.md) freezes the new
+fixed-topology main method before s1 evaluation. The [overlap-ownership study](research/overlap-ownership-study.md)
+records geometry-only ranking, emitted-reverse scope and the complete native
+augmentation side-study results.
+
 ## Run in minutes
 
 Python 3.10+ and NumPy:
