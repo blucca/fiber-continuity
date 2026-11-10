@@ -6,6 +6,26 @@ The dynamic program jointly selects transverse positions along each existing fib
 
 ## Current result
 
+**Choose the operating point for the downstream task.** The
+[complete legacy pipeline + fixed DP + native cleanup](research/whole-pipeline-comparison.md)
+provides longer same-chain arcs at matched manual coverage on two previously
+scored cubes. The current author's raw AFV provides greater full-output coverage
+and greater absolute full-output continuity in both cubes.
+
+| Scroll | Whole-pipeline radius-2 continuity gain vs current raw, lower / upper | Observed interior switches, legacy DP / current raw |
+|---|---:|---:|
+| s1 | **+21.961% / +19.547%** | 1 / 2 |
+| s5 | **+8.229% / +6.868%** | 0 / 1 |
+
+Both current-raw and equally native-cleaned comparator gates pass; the legacy
+pipeline without DP also passes. All **18,502** segments in the four legacy
+native-clean outputs satisfy the current author's assigned-family validator,
+with every original gap preserved. This is a two-revealed-cube benchmark.
+The DP-specific fresh validation against the legacy pipeline appears below.
+[All 32 matched / 16 full rows, architecture control and native audit](research/whole-pipeline-results.json).
+
+### Direct transfer onto the current emitter
+
 The [current author's medial-ridge AFV defaults](research/current-medial-ridge-transfer.md)
 win the fixed-DP transfer comparison on both already-inspected cubes using the
 existing `fiber_hz_vt` input. Keep the author's original geometry at this

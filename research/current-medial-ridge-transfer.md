@@ -9,6 +9,10 @@ This comparison uses two **already inspected** cubes, the existing fixed
 `scrollprize/fiber_hz_vt` predictions and the original manual graphs. New blind
 tests, model runs and parameter searches: 0.
 
+The later [complete legacy-pipeline comparison](whole-pipeline-comparison.md)
+adds a separate same-coverage operating point and architecture control. The
+direct transfer measurements on this page retain their original inputs and time.
+
 ## Exact comparator and inputs
 
 - Current emitter: [`Qualzz/AVF_SPLINE_GENERATOR@bee798f72751169065fe020d4ad02c52519c2d2b`](https://github.com/Qualzz/AVF_SPLINE_GENERATOR/tree/bee798f72751169065fe020d4ad02c52519c2d2b).
