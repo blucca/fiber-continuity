@@ -15,6 +15,10 @@ After an [immutable source/parameter freeze](https://github.com/blucca/fiber-con
 
 Upper-bracket gains are +5.581% / +3.029%. Boundary switches are 0 in both methods. Radius 3 sensitivity increases in s1 and decreases in s5. The preceding four development cubes include three positive and one negative radius 2 result.
 
+[![The full six-cube native-clean comparison: radius 2 matched coverage, radius 3 with the same prefixes, all negative development and sensitivity results retained](research/centre-path-comparison.svg)](research/centre-path-comparison.svg)
+
+Regenerate this figure from the published aggregates: `python research/plot-centre-path-comparison.py`.
+
 - [Complete fresh validation: full/matched, raw/clean, both radii, controls](research/continuous-path-spatial-validation.md).
 - [Method, fixed parameters and executable CT/P/traces command](research/continuous-centre-path-study.md).
 - [Annotation-aware evaluator](contract.md): coverage, sustained tree-ID switches, same-chain continuity, unknown and ambiguous arcs are separate measurements. Original nodes, edges and branches stay intact.

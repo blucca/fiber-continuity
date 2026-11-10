@@ -2,6 +2,10 @@
 
 **Both newly held-out cubes pass the published native-clean radius2 gate:** common-coverage lower-bracket continuity improves **5.581%** in s1 and **0.939%** in s5, with observed interior/boundary switch counts unchanged. Upper-bracket gains are 5.581% and 3.029%. Radius3 clean sensitivity increases in s1 and decreases in s5.
 
+[![All six native-clean comparisons, including the preceding negative development case and radius 3 sensitivity](centre-path-comparison.svg)](centre-path-comparison.svg)
+
+The figure uses the two published aggregate snapshots. [Regenerate it with the standard-library renderer](plot-centre-path-comparison.py).
+
 ## Frozen scope
 
 Immutable source/parameter freeze: [`1afa30ab840f7606f0b6594213731c5a88202c61`](https://github.com/blucca/fiber-continuity/tree/1afa30ab840f7606f0b6594213731c5a88202c61). All four algorithm source files, the evaluator and the manifest were anonymously fetched and byte-matched at 2026-11-10 01:39:42 UTC. New case reference-performance and image reads at that point: 0. The first run completed both CT/P-only geometry and native-cleanup cases before opening either reference. Postprocessor heldout tuning: 0.
