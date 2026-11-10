@@ -1,0 +1,156 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="920" viewBox="0 0 1440 920" role="img" aria-labelledby="title desc">
+<title id="title">Same V/H family, a different physical sheet</title>
+<desc id="desc">One saved artificial contact probe on pinned medial-ridge code. Full raw A-to-B trace, finished samples, and full zero-coverage B-to-A control are plotted against independent physical A/B centrelines. A raw-span coverage core reaches the correct A seed.</desc>
+<metadata>{&quot;source_pin&quot;: &quot;bee798f72751169065fe020d4ad02c52519c2d2b&quot;, &quot;frame&quot;: &quot;native XYZ = 2q + .5&quot;, &quot;native_y&quot;: 20.5, &quot;new_scene_runs&quot;: 0, &quot;new_model_runs&quot;: 0, &quot;data&quot;: [&quot;curves.npz&quot;, &quot;artificial-sheet-centrelines-tracing-xyz.npy&quot;]}</metadata>
+<defs><clipPath id="plot"><rect x="110" y="216" width="1180" height="376"/></clipPath></defs>
+<rect width="1440" height="920" fill="#FFFFFF"/>
+<g font-family="Adwaita Sans, Liberation Sans, sans-serif" fill="#273442">
+<text x="70" y="64" font-size="34" font-weight="600" fill="#273442" text-anchor="start" >Same V/H family, a different physical sheet</text>
+<text x="70" y="98" font-size="18" font-weight="400" fill="#273442" text-anchor="start" >One artificial two-sheet contact probe on pinned medial-ridge code bee798f7</text>
+<line x1="70" y1="147" x2="106" y2="147" stroke="#087F8C" stroke-width="8" />
+<text x="118" y="153" font-size="16" font-weight="400" fill="#273442" text-anchor="start" >A reference</text>
+<line x1="265" y1="147" x2="301" y2="147" stroke="#96559F" stroke-width="8" />
+<text x="313" y="153" font-size="16" font-weight="400" fill="#273442" text-anchor="start" >B reference</text>
+<line x1="460" y1="147" x2="496" y2="147" stroke="#273442" stroke-width="3" />
+<text x="508" y="153" font-size="16" font-weight="400" fill="#273442" text-anchor="start" >Raw trace</text>
+<circle cx="666" cy="147" r="2.1" stroke="#273442" stroke-width="1.2" fill="white"/>
+<circle cx="678" cy="147" r="2.1" stroke="#273442" stroke-width="1.2" fill="white"/>
+<circle cx="690" cy="147" r="2.1" stroke="#273442" stroke-width="1.2" fill="white"/>
+<text x="706" y="153" font-size="16" font-weight="400" fill="#273442" text-anchor="start" >Finished samples</text>
+<line x1="921" y1="147" x2="967" y2="147" stroke="#273442" stroke-width="3" stroke-dasharray="8 6"/>
+<text x="979" y="153" font-size="16" font-weight="400" fill="#273442" text-anchor="start" >Zero-coverage control</text>
+<line x1="110.0" y1="216" x2="110.0" y2="592" stroke="#DCE5EB" stroke-width="1" />
+<line x1="110.0" y1="592" x2="110.0" y2="598" stroke="#273442" stroke-width="1" />
+<text x="110.0" y="619" font-size="15" font-weight="400" fill="#273442" text-anchor="middle" >0</text>
+<line x1="405.0" y1="216" x2="405.0" y2="592" stroke="#DCE5EB" stroke-width="1" />
+<line x1="405.0" y1="592" x2="405.0" y2="598" stroke="#273442" stroke-width="1" />
+<text x="405.0" y="619" font-size="15" font-weight="400" fill="#273442" text-anchor="middle" >32</text>
+<line x1="700.0" y1="216" x2="700.0" y2="592" stroke="#DCE5EB" stroke-width="1" />
+<line x1="700.0" y1="592" x2="700.0" y2="598" stroke="#273442" stroke-width="1" />
+<text x="700.0" y="619" font-size="15" font-weight="400" fill="#273442" text-anchor="middle" >64</text>
+<line x1="995.0" y1="216" x2="995.0" y2="592" stroke="#DCE5EB" stroke-width="1" />
+<line x1="995.0" y1="592" x2="995.0" y2="598" stroke="#273442" stroke-width="1" />
+<text x="995.0" y="619" font-size="15" font-weight="400" fill="#273442" text-anchor="middle" >96</text>
+<line x1="1290.0" y1="216" x2="1290.0" y2="592" stroke="#DCE5EB" stroke-width="1" />
+<line x1="1290.0" y1="592" x2="1290.0" y2="598" stroke="#273442" stroke-width="1" />
+<text x="1290.0" y="619" font-size="15" font-weight="400" fill="#273442" text-anchor="middle" >128</text>
+<line x1="110" y1="505.2307692307692" x2="1290" y2="505.2307692307692" stroke="#DCE5EB" stroke-width="1" />
+<line x1="104" y1="505.2307692307692" x2="110" y2="505.2307692307692" stroke="#273442" stroke-width="1" />
+<text x="95" y="510.2307692307692" font-size="15" font-weight="400" fill="#273442" text-anchor="end" >16.5</text>
+<line x1="110" y1="389.53846153846155" x2="1290" y2="389.53846153846155" stroke="#DCE5EB" stroke-width="1" />
+<line x1="104" y1="389.53846153846155" x2="110" y2="389.53846153846155" stroke="#273442" stroke-width="1" />
+<text x="95" y="394.53846153846155" font-size="15" font-weight="400" fill="#273442" text-anchor="end" >20.5</text>
+<line x1="110" y1="273.84615384615387" x2="1290" y2="273.84615384615387" stroke="#DCE5EB" stroke-width="1" />
+<line x1="104" y1="273.84615384615387" x2="110" y2="273.84615384615387" stroke="#273442" stroke-width="1" />
+<text x="95" y="278.84615384615387" font-size="15" font-weight="400" fill="#273442" text-anchor="end" >24.5</text>
+<line x1="110" y1="216" x2="110" y2="592" stroke="#273442" stroke-width="1.1" />
+<line x1="110" y1="592" x2="1290" y2="592" stroke="#273442" stroke-width="1.1" />
+<text x="700.0" y="649" font-size="17" font-weight="400" fill="#273442" text-anchor="middle" >Native x (voxels)</text>
+<text x="33" y="404.0" font-size="17" font-weight="400" fill="#273442" text-anchor="middle" transform="rotate(-90 33 404.0)">Native z (voxels)</text>
+<g clip-path="url(#plot)" stroke-linecap="round" stroke-linejoin="round">
+<path id="physical-A" d="M114.609375,505.230774 L133.046875,505.230774 L151.484375,505.230774 L169.921875,505.230774 L188.359375,505.230774 L206.796875,505.230774 L225.234375,505.230774 L243.671875,505.230774 L262.109375,505.230774 L280.546875,505.230774 L298.984375,505.230774 L317.421875,505.230774 L335.859375,505.230774 L354.296875,505.230774 L372.734375,505.230774 L391.171875,505.230774 L409.609375,505.230774 L428.046875,505.230774 L446.484375,505.230774 L464.921875,505.230774 L483.359375,505.230774 L501.796875,505.230774 L520.234375,505.230774 L538.671875,505.230774 L557.109375,505.230774 L575.546875,505.230774 L593.984375,505.230774 L612.421875,505.230774 L630.859375,505.230774 L649.296875,505.230774 L667.734375,505.230774 L686.171875,505.230774 L704.609375,505.230774 L723.046875,505.230774 L741.484375,505.230774 L759.921875,505.230774 L778.359375,505.230774 L796.796875,505.230774 L815.234375,505.230774 L833.671875,505.230774 L852.109375,505.230774 L870.546875,505.230774 L888.984375,505.230774 L907.421875,505.230774 L925.859375,505.230774 L944.296875,505.230774 L962.734375,505.230774 L981.171875,505.230774 L999.609375,505.230774 L1018.046875,505.230774 L1036.484375,505.230774 L1054.921875,505.230774 L1073.359375,505.230774 L1091.796875,505.230774 L1110.234375,505.230774 L1128.671875,505.230774 L1147.109375,505.230774 L1165.546875,505.230774 L1183.984375,505.230774 L1202.421875,505.230774 L1220.859375,505.230774 L1239.296875,505.230774 L1257.734375,505.230774 L1276.171875,505.230774" stroke="#087F8C" stroke-width="8" fill="none" opacity=".72"/>
+<path id="physical-B" d="M114.609375,273.846161 L133.046875,273.846161 L151.484375,273.846161 L169.921875,273.846161 L188.359375,273.846161 L206.796875,273.846161 L225.234375,273.846161 L243.671875,273.846161 L262.109375,273.846161 L280.546875,273.846161 L298.984375,273.846161 L317.421875,273.846161 L335.859375,273.846161 L354.296875,273.846161 L372.734375,273.846161 L391.171875,273.846161 L409.609375,273.846161 L428.046875,275.430054 L446.484375,280.120850 L464.921875,287.738281 L483.359375,297.989563 L501.796875,310.480835 L520.234375,324.732025 L538.671875,340.195496 L557.109375,356.276917 L575.546875,372.358398 L593.984375,387.821777 L612.421875,402.073059 L630.859375,414.564270 L649.296875,424.815613 L667.734375,432.433044 L686.171875,437.123779 L704.609375,438.707703 L723.046875,438.235321 L741.484375,436.836304 L759.921875,434.564453 L778.359375,431.507019 L796.796875,427.781555 L815.234375,423.531219 L833.671875,418.919312 L852.109375,414.123108 L870.546875,409.326874 L888.984375,404.714966 L907.421875,400.464600 L925.859375,396.739105 L944.296875,393.681732 L962.734375,391.409851 L981.171875,390.010864 L999.609375,389.538452 L1018.046875,389.538452 L1036.484375,389.538452 L1054.921875,389.538452 L1073.359375,389.538452 L1091.796875,389.538452 L1110.234375,389.538452 L1128.671875,389.538452 L1147.109375,389.538452 L1165.546875,389.538452 L1183.984375,389.538452 L1202.421875,389.538452 L1220.859375,389.538452 L1239.296875,389.538452 L1257.734375,389.538452 L1276.171875,389.538452" stroke="#96559F" stroke-width="8" fill="none" opacity=".72"/>
+<ellipse id="coverage-core" cx="1072.684807" cy="391.161181" rx="37.796875" ry="118.584615" fill="#DA9A36" fill-opacity=".12" stroke="#DA9A36" stroke-width="1.8"/>
+<path d="M131.499075,273.859504 L145.327200,273.862980 L159.155322,273.867393 L172.983447,273.872965 L186.811572,273.879971 L200.639697,273.888797 L214.467822,273.899996 L228.295947,273.914064 L242.124072,273.931882 L255.952197,273.954335 L269.780314,273.982691 L283.608439,274.018549 L297.436546,274.063840 L311.264671,274.121158 L325.092779,274.193647 L338.920868,274.285389 L352.748941,274.401514 L366.576995,274.548201 L380.404997,274.732898 L394.232911,274.963218 L408.060755,275.244401 L421.888475,275.570379 L435.864441,270.540970 L449.615903,275.168658 L463.413222,279.462534 L477.143372,285.749241 L490.010250,303.919560 L503.279786,316.395716 L516.498964,329.854495 L530.500883,332.683151 L544.657289,335.276082 L557.364615,354.190927 L570.340756,369.256041 L580.773954,404.874332 L590.736164,443.547021 L604.693069,443.108999 L618.450228,447.544101 L632.182418,452.782867 L645.953362,458.003704 L659.768088,461.136824 L673.587351,465.490115 L687.412628,467.196411 L701.246063,469.514172 L715.072465,467.540263 L728.905232,467.955446 L742.727519,462.366980 L756.554730,461.626316 L770.381097,460.612137 L784.206057,459.214772 L798.028836,457.302871 L811.849365,454.951072 L825.667151,452.295583 L839.479381,449.227394 L853.277403,445.207529 L867.055099,438.010246 L880.867821,430.828244 L894.703964,428.005821 L908.552908,427.492994 L922.209278,435.906751 L935.526571,456.564689 L948.905969,481.511538 L962.734305,502.181281 L976.562430,502.172345 L990.390555,502.168593 L1004.218680,502.163739 L1018.046805,502.146030 L1031.874930,502.092684 L1045.702984,501.958851 L1059.531039,501.675847 L1073.359375,501.201306 L1087.187500,501.704644 L1101.015484,501.980807 L1114.843609,502.104380 L1128.671734,502.151161 L1142.499859,502.165669 L1156.327984,502.168759 L1170.156109,502.168648 L1183.984234,502.168042 L1197.812359,502.167655 L1211.640484,502.167380 L1225.468609,502.167324 L1239.296734,502.167269 L1253.124859,502.167269 L1266.952984,502.167269" stroke="white" stroke-width="5.5" fill="none" stroke-dasharray="8 7"/>
+<path id="control-curve-0" d="M131.499075,273.859504 L145.327200,273.862980 L159.155322,273.867393 L172.983447,273.872965 L186.811572,273.879971 L200.639697,273.888797 L214.467822,273.899996 L228.295947,273.914064 L242.124072,273.931882 L255.952197,273.954335 L269.780314,273.982691 L283.608439,274.018549 L297.436546,274.063840 L311.264671,274.121158 L325.092779,274.193647 L338.920868,274.285389 L352.748941,274.401514 L366.576995,274.548201 L380.404997,274.732898 L394.232911,274.963218 L408.060755,275.244401 L421.888475,275.570379 L435.864441,270.540970 L449.615903,275.168658 L463.413222,279.462534 L477.143372,285.749241 L490.010250,303.919560 L503.279786,316.395716 L516.498964,329.854495 L530.500883,332.683151 L544.657289,335.276082 L557.364615,354.190927 L570.340756,369.256041 L580.773954,404.874332 L590.736164,443.547021 L604.693069,443.108999 L618.450228,447.544101 L632.182418,452.782867 L645.953362,458.003704 L659.768088,461.136824 L673.587351,465.490115 L687.412628,467.196411 L701.246063,469.514172 L715.072465,467.540263 L728.905232,467.955446 L742.727519,462.366980 L756.554730,461.626316 L770.381097,460.612137 L784.206057,459.214772 L798.028836,457.302871 L811.849365,454.951072 L825.667151,452.295583 L839.479381,449.227394 L853.277403,445.207529 L867.055099,438.010246 L880.867821,430.828244 L894.703964,428.005821 L908.552908,427.492994 L922.209278,435.906751 L935.526571,456.564689 L948.905969,481.511538 L962.734305,502.181281 L976.562430,502.172345 L990.390555,502.168593 L1004.218680,502.163739 L1018.046805,502.146030 L1031.874930,502.092684 L1045.702984,501.958851 L1059.531039,501.675847 L1073.359375,501.201306 L1087.187500,501.704644 L1101.015484,501.980807 L1114.843609,502.104380 L1128.671734,502.151161 L1142.499859,502.165669 L1156.327984,502.168759 L1170.156109,502.168648 L1183.984234,502.168042 L1197.812359,502.167655 L1211.640484,502.167380 L1225.468609,502.167324 L1239.296734,502.167269 L1253.124859,502.167269 L1266.952984,502.167269" stroke="#273442" stroke-width="2.8" fill="none" stroke-dasharray="8 7"/>
+<path d="M119.218750,505.230769 L133.046875,505.230769 L146.875000,505.230769 L160.703125,505.230769 L174.531250,505.230769 L188.359375,505.230769 L202.187500,505.230769 L216.015625,505.230769 L229.843750,505.230769 L243.671875,505.230769 L257.500000,505.230769 L271.328125,505.230769 L285.156250,505.230769 L298.984375,505.230769 L312.812500,505.230769 L326.640625,505.230769 L340.468750,505.230769 L354.296875,505.230769 L368.125000,505.230769 L381.953125,505.230769 L395.781250,505.230769 L409.609375,505.230769 L423.437500,505.230769 L437.265625,505.230769 L451.093750,505.230769 L464.921875,505.230769 L478.750000,505.230769 L492.578125,505.230769 L506.406250,505.230769 L520.234375,505.230769 L534.062500,505.230769 L547.890625,505.230769 L561.718750,505.230769 L575.546875,505.230769 L589.375000,502.061184 L603.172213,489.672247 L616.833296,468.151231 L630.597172,458.170859 L644.427618,456.961280 L658.253703,459.165840 L672.071384,463.686780 L685.882418,467.437764 L699.702173,469.494036 L713.536171,467.830328 L727.364788,468.297643 L741.194390,462.616552 L755.020335,461.846540 L768.847123,461.049386 L782.673982,459.956815 L796.500208,458.444870 L810.324676,456.326867 L824.146471,453.630830 L837.965804,450.692999 L851.783028,447.440002 L865.598844,444.125881 L879.414591,440.887173 L893.230759,437.720512 L907.039191,432.614973 L920.820966,424.428942 L934.594231,417.944740 L948.344918,408.272306 L962.004102,392.674230 L975.843903,392.144632 L989.675263,392.572558 L1003.505428,396.037945 L1017.350433,391.136797 L1031.184255,392.253475 L1045.012310,392.820145 L1058.838395,396.190149 L1072.684807,391.161181 L1086.518699,392.257723 L1100.346754,392.819814 L1114.172909,396.189377 L1128.019321,391.161015 L1141.853213,392.257668 L1155.681198,392.819758 L1169.507353,396.189377 L1183.353765,391.161015 L1197.187657,392.257668 L1211.015712,392.819758 L1224.841868,396.189377 L1238.688209,391.161015 L1252.522101,392.257668 L1266.350156,392.819758" stroke="white" stroke-width="5.5" fill="none"/>
+<path id="raw-curve-0" d="M119.218750,505.230769 L133.046875,505.230769 L146.875000,505.230769 L160.703125,505.230769 L174.531250,505.230769 L188.359375,505.230769 L202.187500,505.230769 L216.015625,505.230769 L229.843750,505.230769 L243.671875,505.230769 L257.500000,505.230769 L271.328125,505.230769 L285.156250,505.230769 L298.984375,505.230769 L312.812500,505.230769 L326.640625,505.230769 L340.468750,505.230769 L354.296875,505.230769 L368.125000,505.230769 L381.953125,505.230769 L395.781250,505.230769 L409.609375,505.230769 L423.437500,505.230769 L437.265625,505.230769 L451.093750,505.230769 L464.921875,505.230769 L478.750000,505.230769 L492.578125,505.230769 L506.406250,505.230769 L520.234375,505.230769 L534.062500,505.230769 L547.890625,505.230769 L561.718750,505.230769 L575.546875,505.230769 L589.375000,502.061184 L603.172213,489.672247 L616.833296,468.151231 L630.597172,458.170859 L644.427618,456.961280 L658.253703,459.165840 L672.071384,463.686780 L685.882418,467.437764 L699.702173,469.494036 L713.536171,467.830328 L727.364788,468.297643 L741.194390,462.616552 L755.020335,461.846540 L768.847123,461.049386 L782.673982,459.956815 L796.500208,458.444870 L810.324676,456.326867 L824.146471,453.630830 L837.965804,450.692999 L851.783028,447.440002 L865.598844,444.125881 L879.414591,440.887173 L893.230759,437.720512 L907.039191,432.614973 L920.820966,424.428942 L934.594231,417.944740 L948.344918,408.272306 L962.004102,392.674230 L975.843903,392.144632 L989.675263,392.572558 L1003.505428,396.037945 L1017.350433,391.136797 L1031.184255,392.253475 L1045.012310,392.820145 L1058.838395,396.190149 L1072.684807,391.161181 L1086.518699,392.257723 L1100.346754,392.819814 L1114.172909,396.189377 L1128.019321,391.161015 L1141.853213,392.257668 L1155.681198,392.819758 L1169.507353,396.189377 L1183.353765,391.161015 L1197.187657,392.257668 L1211.015712,392.819758 L1224.841868,396.189377 L1238.688209,391.161015 L1252.522101,392.257668 L1266.350156,392.819758" stroke="#273442" stroke-width="2.8" fill="none"/>
+<circle class="finished-sample" cx="119.218750" cy="505.230769" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="133.961722" cy="505.230769" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="148.704693" cy="505.230769" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="163.447665" cy="505.230769" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="178.190635" cy="505.230769" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="192.933610" cy="505.230769" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="207.676580" cy="505.230769" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="222.419550" cy="505.230769" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="237.162520" cy="505.230769" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="251.905490" cy="505.230769" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="266.648469" cy="505.230769" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="281.391439" cy="505.230769" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="296.134410" cy="505.230769" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="310.877380" cy="505.230769" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="325.620350" cy="505.230769" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="340.363320" cy="505.230769" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="355.106290" cy="505.230769" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="369.849260" cy="505.230769" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="384.592231" cy="505.230769" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="399.335201" cy="505.230769" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="414.078189" cy="505.230769" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="428.821141" cy="505.230769" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="443.564129" cy="505.230797" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="458.307081" cy="505.230769" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="473.050069" cy="505.229997" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="487.793022" cy="505.229831" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="502.536010" cy="505.240258" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="517.278927" cy="505.257442" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="532.021915" cy="505.235403" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="546.764797" cy="505.050706" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="561.506448" cy="504.426278" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="576.243141" cy="503.361953" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="590.873666" cy="498.151487" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="605.191910" cy="486.863395" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="619.536142" cy="476.040797" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="634.079312" cy="468.537947" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="648.768249" cy="464.879202" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="663.506418" cy="464.200876" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="678.247753" cy="465.022028" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="692.988209" cy="465.971938" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="707.730634" cy="466.228075" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="722.472039" cy="465.611867" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="737.210139" cy="464.382043" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="751.945496" cy="462.883723" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="766.679868" cy="461.293938" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="781.412622" cy="459.584001" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="796.142492" cy="457.628628" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="810.867158" cy="455.328521" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="825.585705" cy="452.668342" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="840.297852" cy="449.691839" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="855.003457" cy="446.411039" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="869.698583" cy="442.715884" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="884.374508" cy="438.353822" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="899.014000" cy="432.949998" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="913.591247" cy="426.098167" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="928.075653" cy="417.468268" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="942.484100" cy="407.582285" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="956.870321" cy="396.913381" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="971.488713" cy="392.870953" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="986.233424" cy="392.776729" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="1000.976799" cy="392.836970" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="1015.719681" cy="392.943276" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="1030.462633" cy="393.038935" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="1045.205586" cy="393.081192" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="1059.948609" cy="393.083509" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="1074.691491" cy="393.096197" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="1089.434514" cy="393.116774" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="1104.177467" cy="393.110816" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="1118.920490" cy="393.095701" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="1133.663372" cy="393.105851" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="1148.406395" cy="393.118209" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="1163.149347" cy="393.104748" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="1177.892370" cy="393.096970" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="1192.635252" cy="393.118319" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="1207.378275" cy="393.123063" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="1222.121228" cy="393.067235" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="1236.864251" cy="392.975438" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="1251.607133" cy="392.892082" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle class="finished-sample" cx="1266.350156" cy="392.819758" r="1.8" fill="white" stroke="#273442" stroke-width="1.2"/>
+<circle id="nearest-raw-point" cx="1072.684807" cy="391.161181" r="4" fill="#DA9A36" stroke="#273442" stroke-width="1.2"/>
+<circle id="correct-A-seed" cx="1073.359375" cy="505.230769" r="5.7" fill="#DA9A36" stroke="#273442" stroke-width="1.4"/>
+</g>
+<text x="935" y="205" font-size="16" font-weight="400" fill="#273442" text-anchor="start" >Raw coverage core: r = 4.1 native voxels</text>
+<line x1="1072.684806585312" y1="213" x2="1072.684806585312" y2="272.57656555175777" stroke="#DA9A36" stroke-width="1.4" />
+<line x1="1072.684806585312" y1="391.16118093637317" x2="1116.684806585312" y2="354.16118093637317" stroke="#273442" stroke-width="1" />
+<text x="1124.684806585312" y="348.16118093637317" font-size="15" font-weight="400" fill="#273442" text-anchor="start" >Nearest saved raw-tail point</text>
+<line x1="1080.359375" y1="510.2307692307692" x2="1116.359375" y2="541.2307692307693" stroke="#273442" stroke-width="1" />
+<text x="1124.359375" y="548.2307692307693" font-size="16" font-weight="600" fill="#273442" text-anchor="start" >Correct A seed</text>
+<text x="1311" y="511.23077392578125" font-size="19" font-weight="600" fill="#087F8C" text-anchor="start" >A</text>
+<text x="1311" y="395.5384521484375" font-size="19" font-weight="600" fill="#96559F" text-anchor="start" >B</text>
+<text x="70" y="677" font-size="15" font-weight="400" fill="#273442" text-anchor="start" >Native = 2q + .5; section at native y = 20.5. Horizontal and vertical scales differ.</text>
+<text x="70" y="716" font-size="18" font-weight="500" fill="#273442" text-anchor="start" >Native V/H family gate: 83/83 raw segments and 78/78 finished segments pass.</text>
+<text x="70" y="744" font-size="18" font-weight="400" fill="#273442" text-anchor="start" >Finish retains 99.762% of raw arc length; the initial trace runs left A → right B.</text>
+<text x="70" y="787" font-size="18" font-weight="500" fill="#273442" text-anchor="start" >Correct A seed q = (52, 10, 8): committed raw-span coverage changes 0 → 1.</text>
+<text x="70" y="815" font-size="18" font-weight="400" fill="#273442" text-anchor="start" >From this seed: clean coverage traces 1 curve; existing raw coverage traces 0 curves.</text>
+<text x="70" y="843" font-size="18" font-weight="400" fill="#273442" text-anchor="start" >The full zero-coverage control runs left B → right A, switching at its other end.</text>
+<text x="70" y="881" font-size="15" font-weight="400" fill="#273442" text-anchor="start" >CT / A / B are independent artificial-layer references; the original tracer uses V/H fields.</text>
+<text x="70" y="904" font-size="15" font-weight="400" fill="#273442" text-anchor="start" >Scope: one artificial scene at exact bee798f7. Real-event frequency requires operator fields.</text>
+</g></svg>

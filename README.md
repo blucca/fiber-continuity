@@ -18,6 +18,13 @@ On the two preregistered test cubes with the same fixed prediction model:
 The useful handoff is the AFV/manual-fiber checker and native export. The measurements
 and complete positive/negative research history follow below.
 
+### How a long trace can hide a correct-layer seed
+
+A [fixed artificial same-family contact probe](research/tracer-sheet-contact-probe.md)
+runs the pinned medial-ridge emitter: an A→B long trace passes all native family
+checks, then its raw coverage suppresses a prepared seed on A. The report keeps
+both complete curves, including the zero-coverage control's opposite-end layer jump.
+
 ## Prospective spatial validation — simpler matched-coverage operating point
 
 **Use the original legacy spline/gap-MLP pipeline with native cleanup for
