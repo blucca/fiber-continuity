@@ -40,10 +40,10 @@ python evaluate.py --reference data/reference.json \
   --output temp/centre-path/dp-raw.metrics-r2.json
 ```
 
-The command writes both `dp-raw.json` and `pointwise-raw.json`, plus aggregate diagnostics. For native cleanup, use the pinned upstream `vesuvius.fiber_spline_generator.cleanup.clean` with max_angle45/min_length100 and `ExteriorBlack` constructed from the same CT block at local origin0; black_distance16. Map `V/H` to native family0/1 and preserve source IDs and gaps. Evaluate the resulting clean envelope with the same reference and compare lower/upper coverage brackets. Baseline/model and float-export reproduction are linked in [README](../README.md) and [float input reproduction](float-input-reproduction.md).
+The command writes both `dp-raw.json` and `pointwise-raw.json`, plus aggregate diagnostics. For native cleanup, use the pinned upstream `vesuvius.fiber_spline_generator.cleanup.clean` with max_angle45/min_length100 and `ExteriorBlack` constructed from the same CT block at local origin0; black_distance16. Map `V/H` to native family0/1 and preserve source IDs and gaps. Evaluate the resulting clean envelope with the same reference and compare lower/upper coverage brackets. The [ROI-local envelope → native V4 → .vcobj commands](../native/README.md#from-a-measured-trace-envelope) provide the standard object handoff after cleanup. Baseline/model and float-export reproduction are linked in [README](../README.md) and [float input reproduction](float-input-reproduction.md).
 
 ## Frozen first new-spatial validation
 
 [The source and parameter manifest](centre-path-freeze.json) fixes all algorithm inputs, source files, evaluator/native pins, two case filenames, and the gate before their first reference scoring. Primary endpoint is clean radius2 matched continuity in both brackets on **both** new cases, with observed clean interior/boundary switches no greater at r2/r3 in either bracket. Publish all raw and clean rows at both radii. Reference performance and image reads at freeze: 0. Heldout parameter tuning: 0.
 
-Deployment promotion remains stopped pending this full gate and the native consumption stage. Research code and synthetic checks use MIT; acquire raw CT/NML through the official data source.
+The fresh native-clean radius2 gate and typed native consumption stage have now passed; see the linked complete validation. Whole-volume deployment promotion remains stopped. Research code and synthetic checks use MIT; acquire raw CT/NML through the official data source.

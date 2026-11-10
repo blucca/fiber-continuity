@@ -37,3 +37,19 @@ Success prints aggregate `format_roundtrip=passed` and preserves point order,
 control IDs, source metadata, family, length and frame binding. An existing
 output path stops the command. MIT applies to this wrapper and fixture; native
 source retains its own licenses.
+
+## From a measured trace envelope
+
+The Python standard-library converter bridges this repository's ROI-local XYZ `curves` envelopes to the native V4 input above. Use the cleaned output for the measured native-clean endpoint. Storage scale is fixed at 1; supply the actual volume's `metadata.json` `id` and the ROI origin in XYZ order. Voxel size is descriptive metadata.
+
+```sh
+python native/check-trace-conversion.py
+python native/traces_to_v4.py --traces data/clean-traces.json \
+  --origin-xyz 2497 2997 8997 --volume-id 20230205180739 \
+  --voxel-size-um 7.91 7.91 7.91 --output temp/native-fibers.json
+temp/native-build/native_v4_store temp/native-fibers.json temp/fibers.vcobj
+```
+
+These example coordinates belong to the documented fresh s1 cube. Each source curve receives a fresh native UUID and two endpoint controls with IDs 0/1. Original source IDs/order, all other curve fields and inferred-gap ranges remain metadata; dense points keep their order and receive the origin once. `manual_tag` fixes the program-selected V/H family, matching the pinned native writer's family semantics.
+
+[The converter's real native check](conversion-check.json) includes the entirely synthetic two-fiber fixture and all 79 fixed-DP clean curves (5,168 points) in the fresh s1 case. Every geometric/frame/source-ID/gap field exactly matches the preceding measured native input; checked writes, closed/read-only reopen and immutable typed loads pass.

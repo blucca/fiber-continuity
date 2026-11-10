@@ -23,7 +23,7 @@ The measured scope is fixed-model centering after native cleanup on partial manu
 
 ## Native typed object handoff
 
-[`native_v4_store`](native/README.md) converts native V4 polyline JSON into a checked `.vcobj`, closes/read-only reopens it, and verifies immutable typed fiber loads and volume-frame identity. The pinned native library passed the all-synthetic fixture and real trace archives, including the fresh s1 baseline (78 curves) and DP (79 curves). [Aggregate fresh native check](native/heldout-check.json). The small C++ CLI uses the existing native targets with the Python/server stack disabled.
+[`native_v4_store`](native/README.md) bridges ROI-local trace envelopes through native V4 polyline JSON into a checked `.vcobj`, closes/read-only reopens it, and verifies immutable typed fiber loads and volume-frame identity. The pinned native library passed the all-synthetic fixture and real trace archives, including the fresh s1 baseline (78 curves) and DP (79 curves). [Aggregate fresh native check](native/heldout-check.json). The small C++ CLI uses the existing native targets with the Python/server stack disabled.
 
 ## Run in minutes
 

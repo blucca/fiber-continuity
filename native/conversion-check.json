@@ -1,0 +1,32 @@
+{
+  "status": "complete",
+  "converter_check": "passed",
+  "synthetic_native": {
+    "closed_reopen": "passed",
+    "fiber_count": 2,
+    "format_roundtrip": "passed",
+    "immutable_typed_load": "passed",
+    "max_native_frame_abs_error_vox": 0.0,
+    "native_v4_codec": "passed",
+    "point_count": 5,
+    "points_order_control_IDs_source_metadata": "preserved"
+  },
+  "actual_dp_native": {
+    "closed_reopen": "passed",
+    "fiber_count": 79,
+    "format_roundtrip": "passed",
+    "immutable_typed_load": "passed",
+    "max_native_frame_abs_error_vox": 0.0,
+    "native_v4_codec": "passed",
+    "point_count": 5168,
+    "points_order_control_IDs_source_metadata": "preserved"
+  },
+  "case": "s1_08997_02997_02497_256",
+  "public_converter_field_parity": "exact for every native point/control/ID/order/family/gap/frame field",
+  "real_curve_count": 79,
+  "real_point_count": 5168,
+  "original_coordinates_declaration": "ROI-local XYZ voxels",
+  "source_ids_and_metadata": "preserved",
+  "native_materialize_runs": 0,
+  "surface_runs": 0
+}
