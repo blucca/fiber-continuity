@@ -3563,7 +3563,27 @@
         "case": "s5_06622_02122_04122_256",
         "status": "pending_original_training_sample_list_or_split"
       }
-    ]
+    ],
+    "numTraining_scope": "declared labeled dataset pool; actual fold-0 optimization and validation item IDs require the original split",
+    "fixed_model_source_registry": "research/fixed-model-training-provenance.json",
+    "observed_public_hzvt_source_pools": [
+      {
+        "dataset": "Dataset002_sk-fibers-hzvt-20250228",
+        "numTraining": 18,
+        "input_file_count": 18
+      },
+      {
+        "dataset": "Dataset003_sk-fibers-hzvt-20250404",
+        "numTraining": 21,
+        "input_file_count": 21
+      }
+    ],
+    "source_name_membership_for_all_evaluated_rois": {
+      "evaluated_roi_count": 8,
+      "direct_source_name_count": 7,
+      "declared_512_parent_crop_count": 1,
+      "source_names_listed_in_both_observed_pools": true
+    }
   },
   "postprocessor_reference_order": {
     "scope": "Fixed postprocessor/comparator parameters and first reference performance in these two spatial ROIs",

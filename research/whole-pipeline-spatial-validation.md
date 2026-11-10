@@ -35,11 +35,18 @@ geometry is ROI-local XYZ and voxel spacing is 7.91 micrometers. Original
 manual node/edge/tree IDs and branches are retained, and existing edge–ROI
 clipping defines the evaluated reference arcs.
 
-**Model-training provenance:** the fixed `fiber_hz_vt@0905e68` checkpoint uses
-`Dataset003_sk-fibers_hzvt-augmented-2`, **18 training samples**, fold **0**,
-`3d_fullres` and `nnUNetTrainerMedialSurfaceRecall`. Per-case membership awaits
-the original training sample list or split. The recommended V2 model retains
-its separate input identity.
+**Model-training provenance:** the fixed `fiber_hz_vt@0905e68` checkpoint names
+`Dataset003_sk-fibers_hzvt-augmented-2`, declares an **18-item labeled dataset pool**,
+and uses fold **0**, `3d_fullres` and `nnUNetTrainerMedialSurfaceRecall`.
+The [fixed-model source registry](fixed-model-training-provenance.json) records
+18 current input filenames in public `Dataset002_sk-fibers-hzvt-20250228` and
+21 in public `Dataset003_sk-fibers-hzvt-20250404`. All fields of Dataset002's
+published `dataset.json` match the checkpoint's published and embedded dataset metadata.
+Both corpora list the source cubes for all eight evaluated ROIs: seven direct
+cube names and the declared 512-cube parent of the s5 crop above. The original
+checkpoint-linked augmented-item list, parent mapping and actual fold-0
+train/validation split supply per-case model exposure; those records remain
+pending. The recommended V2 model retains its separate input identity.
 
 **Postprocessor/comparator provenance:** prospective scope covers the frozen
 postprocessor/comparator parameters and first reference performance in these

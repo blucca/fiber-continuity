@@ -1,0 +1,336 @@
+{
+  "format": "fiber_continuity_fixed_model_provenance_v1",
+  "recorded_utc": "2026-11-10T14:24:54.204720+00:00",
+  "pinned_model": {
+    "repository": "scrollprize/fiber_hz_vt",
+    "revision": "0905e68f14b33d1b98fd32d726f2c97607dea80c",
+    "last_modified_utc": "2025-03-24T19:42:30.000Z",
+    "published_files": [
+      ".gitattributes",
+      "README.md",
+      "checkpoint_final.pth",
+      "dataset.json",
+      "dataset_fingerprint.json",
+      "plans.json"
+    ],
+    "checkpoint_declared_dataset": "Dataset003_sk-fibers_hzvt-augmented-2",
+    "checkpoint_declared_numTraining": 18,
+    "numTraining_scope": "declared labeled dataset pool; actual fold-0 optimization and validation item IDs require the original split",
+    "checkpoint_fold": 0,
+    "configuration": "3d_fullres",
+    "trainer_name": "nnUNetTrainerMedialSurfaceRecall",
+    "original_case_manifest_status": "awaiting_original_checkpoint_dataset_manifest",
+    "augmentation_parent_map_status": "awaiting_original_checkpoint_augmentation_parent_map",
+    "fold0_split_status": "awaiting_original_checkpoint_fold0_split",
+    "checkpoint_lfs_sha256": "a80d98f1baaaa09fac5e9d499ade91cb6f79982239cf8520fec9c217125ed899",
+    "checkpoint_size_bytes": 1132287954
+  },
+  "observed_public_datasets": [
+    {
+      "dataset": "Dataset002_sk-fibers-hzvt-20250228",
+      "directory_url": "https://dl.ash2txt.org/datasets/fiber-skeletons/Dataset002_sk-fibers-hzvt-20250228/",
+      "dataset_json_url": "https://dl.ash2txt.org/datasets/fiber-skeletons/Dataset002_sk-fibers-hzvt-20250228/dataset.json",
+      "imagesTr_index_url": "https://dl.ash2txt.org/datasets/fiber-skeletons/Dataset002_sk-fibers-hzvt-20250228/imagesTr/",
+      "observed_numTraining": 18,
+      "observed_input_file_count": 18,
+      "published_metadata": {
+        "channel_names": {
+          "0": "T2"
+        },
+        "labels": {
+          "background": 0,
+          "vt-fiber": 1,
+          "hz-fiber": 2,
+          "intersection": 3
+        },
+        "numTraining": 18,
+        "file_ending": ".tif",
+        "overwrite_image_reader_writer": "Tiff3DIO"
+      },
+      "input_files": [
+        "s1_00497_01497_03997_256_0000.tif",
+        "s1_00497_02497_02997_256_0000.tif",
+        "s1_00997_02497_02997_256_0000.tif",
+        "s1_02494_01494_03994_512_0000.tif",
+        "s1_08997_02997_02497_256_0000.tif",
+        "s1_10997_02997_02997_256_0000.tif",
+        "s5_03997_01497_03997_256_0000.tif",
+        "s5_05497_01997_02997_256_0000.tif",
+        "s5_05497_02497_02497_256_0000.tif",
+        "s5_06494_01994_03994_512_0000.tif",
+        "s5_06994_00994_04994_512_0000.tif",
+        "s5_07994_01994_05494_512_0000.tif",
+        "s5_07997_02997_05497_256_0000.tif",
+        "s5_08994_02994_03994_512_0000.tif",
+        "s5_08997_02497_04997_256_0000.tif",
+        "s5_11497_05497_03997_256_0000.tif",
+        "s5_14997_01497_01497_256_0000.tif",
+        "s5_16997_03497_03997_256_0000.tif"
+      ]
+    },
+    {
+      "dataset": "Dataset003_sk-fibers-hzvt-20250404",
+      "directory_url": "https://dl.ash2txt.org/datasets/fiber-skeletons/Dataset003_sk-fibers-hzvt-20250404/",
+      "dataset_json_url": "https://dl.ash2txt.org/datasets/fiber-skeletons/Dataset003_sk-fibers-hzvt-20250404/dataset.json",
+      "imagesTr_index_url": "https://dl.ash2txt.org/datasets/fiber-skeletons/Dataset003_sk-fibers-hzvt-20250404/imagesTr/",
+      "observed_numTraining": 21,
+      "observed_input_file_count": 21,
+      "published_metadata": {
+        "channel_names": {
+          "0": "T2"
+        },
+        "labels": {
+          "background": 0,
+          "vt-fiber": 1,
+          "hz-fiber": 2,
+          "intersection": 3
+        },
+        "numTraining": 21,
+        "file_ending": ".tif",
+        "overwrite_image_reader_writer": "Tiff3DIO"
+      },
+      "input_files": [
+        "s1_00497_01497_03997_256_0000.tif",
+        "s1_00497_02497_02997_256_0000.tif",
+        "s1_00997_02497_02997_256_0000.tif",
+        "s1_02494_01494_03994_512_0000.tif",
+        "s1_08994_02494_03494_512_0000.tif",
+        "s1_08997_02997_02497_256_0000.tif",
+        "s1_09997_02497_03497_256_0000.tif",
+        "s1_10997_02997_02997_256_0000.tif",
+        "s5_03997_01497_03997_256_0000.tif",
+        "s5_05497_01997_02997_256_0000.tif",
+        "s5_05497_02497_02497_256_0000.tif",
+        "s5_06494_01994_03994_512_0000.tif",
+        "s5_06994_00994_04994_512_0000.tif",
+        "s5_07994_01994_05494_512_0000.tif",
+        "s5_07997_02997_05497_256_0000.tif",
+        "s5_08994_02994_03994_512_0000.tif",
+        "s5_08997_02497_04997_256_0000.tif",
+        "s5_11497_05497_03997_256_0000.tif",
+        "s5_14997_01497_01497_256_0000.tif",
+        "s5_15494_04494_02494_512_0000.tif",
+        "s5_16997_03497_03997_256_0000.tif"
+      ]
+    }
+  ],
+  "published_dataset002_metadata_matches_checkpoint_dataset_json": true,
+  "public_dataset003_added_input_names_relative_to_dataset002": [
+    "s1_08994_02494_03494_512_0000.tif",
+    "s1_09997_02497_03497_256_0000.tif",
+    "s5_15494_04494_02494_512_0000.tif"
+  ],
+  "evaluated_cases": [
+    {
+      "case": "s5_03997_01497_03997_256",
+      "source_case": "s5_03997_01497_03997_256",
+      "evaluation_role": "all four revealed development; future heldout separate",
+      "role_source": "research/centre-path-freeze.json",
+      "source_crop_offset_zyx": [
+        0,
+        0,
+        0
+      ],
+      "public_source_membership": {
+        "Dataset002_sk-fibers-hzvt-20250228": {
+          "source_input_filename": "s5_03997_01497_03997_256_0000.tif",
+          "source_input_name_listed": true,
+          "evaluated_case_name_listed": true
+        },
+        "Dataset003_sk-fibers-hzvt-20250404": {
+          "source_input_filename": "s5_03997_01497_03997_256_0000.tif",
+          "source_input_name_listed": true,
+          "evaluated_case_name_listed": true
+        }
+      },
+      "checkpoint_augmented_dataset_case_membership": "awaiting_original_checkpoint_dataset_manifest_and_parent_map",
+      "checkpoint_fold0_train_or_validation_membership": "awaiting_original_fold0_split"
+    },
+    {
+      "case": "s1_00497_02497_02997_256",
+      "source_case": "s1_00497_02497_02997_256",
+      "evaluation_role": "all four revealed development; future heldout separate",
+      "role_source": "research/centre-path-freeze.json",
+      "source_crop_offset_zyx": [
+        0,
+        0,
+        0
+      ],
+      "public_source_membership": {
+        "Dataset002_sk-fibers-hzvt-20250228": {
+          "source_input_filename": "s1_00497_02497_02997_256_0000.tif",
+          "source_input_name_listed": true,
+          "evaluated_case_name_listed": true
+        },
+        "Dataset003_sk-fibers-hzvt-20250404": {
+          "source_input_filename": "s1_00497_02497_02997_256_0000.tif",
+          "source_input_name_listed": true,
+          "evaluated_case_name_listed": true
+        }
+      },
+      "checkpoint_augmented_dataset_case_membership": "awaiting_original_checkpoint_dataset_manifest_and_parent_map",
+      "checkpoint_fold0_train_or_validation_membership": "awaiting_original_fold0_split"
+    },
+    {
+      "case": "s1_10997_02997_02997_256",
+      "source_case": "s1_10997_02997_02997_256",
+      "evaluation_role": "all four revealed development; future heldout separate",
+      "role_source": "research/centre-path-freeze.json",
+      "source_crop_offset_zyx": [
+        0,
+        0,
+        0
+      ],
+      "public_source_membership": {
+        "Dataset002_sk-fibers-hzvt-20250228": {
+          "source_input_filename": "s1_10997_02997_02997_256_0000.tif",
+          "source_input_name_listed": true,
+          "evaluated_case_name_listed": true
+        },
+        "Dataset003_sk-fibers-hzvt-20250404": {
+          "source_input_filename": "s1_10997_02997_02997_256_0000.tif",
+          "source_input_name_listed": true,
+          "evaluated_case_name_listed": true
+        }
+      },
+      "checkpoint_augmented_dataset_case_membership": "awaiting_original_checkpoint_dataset_manifest_and_parent_map",
+      "checkpoint_fold0_train_or_validation_membership": "awaiting_original_fold0_split"
+    },
+    {
+      "case": "s5_14997_01497_01497_256",
+      "source_case": "s5_14997_01497_01497_256",
+      "evaluation_role": "all four revealed development; future heldout separate",
+      "role_source": "research/centre-path-freeze.json",
+      "source_crop_offset_zyx": [
+        0,
+        0,
+        0
+      ],
+      "public_source_membership": {
+        "Dataset002_sk-fibers-hzvt-20250228": {
+          "source_input_filename": "s5_14997_01497_01497_256_0000.tif",
+          "source_input_name_listed": true,
+          "evaluated_case_name_listed": true
+        },
+        "Dataset003_sk-fibers-hzvt-20250404": {
+          "source_input_filename": "s5_14997_01497_01497_256_0000.tif",
+          "source_input_name_listed": true,
+          "evaluated_case_name_listed": true
+        }
+      },
+      "checkpoint_augmented_dataset_case_membership": "awaiting_original_checkpoint_dataset_manifest_and_parent_map",
+      "checkpoint_fold0_train_or_validation_membership": "awaiting_original_fold0_split"
+    },
+    {
+      "case": "s1_08997_02997_02497_256",
+      "source_case": "s1_08997_02997_02497_256",
+      "evaluation_role": "first two DP spatial postprocessor-heldouts under the centre-path freeze",
+      "role_source": "research/centre-path-freeze.json",
+      "source_crop_offset_zyx": [
+        0,
+        0,
+        0
+      ],
+      "public_source_membership": {
+        "Dataset002_sk-fibers-hzvt-20250228": {
+          "source_input_filename": "s1_08997_02997_02497_256_0000.tif",
+          "source_input_name_listed": true,
+          "evaluated_case_name_listed": true
+        },
+        "Dataset003_sk-fibers-hzvt-20250404": {
+          "source_input_filename": "s1_08997_02997_02497_256_0000.tif",
+          "source_input_name_listed": true,
+          "evaluated_case_name_listed": true
+        }
+      },
+      "checkpoint_augmented_dataset_case_membership": "awaiting_original_checkpoint_dataset_manifest_and_parent_map",
+      "checkpoint_fold0_train_or_validation_membership": "awaiting_original_fold0_split"
+    },
+    {
+      "case": "s5_07997_02997_05497_256",
+      "source_case": "s5_07997_02997_05497_256",
+      "evaluation_role": "first two DP spatial postprocessor-heldouts under the centre-path freeze",
+      "role_source": "research/centre-path-freeze.json",
+      "source_crop_offset_zyx": [
+        0,
+        0,
+        0
+      ],
+      "public_source_membership": {
+        "Dataset002_sk-fibers-hzvt-20250228": {
+          "source_input_filename": "s5_07997_02997_05497_256_0000.tif",
+          "source_input_name_listed": true,
+          "evaluated_case_name_listed": true
+        },
+        "Dataset003_sk-fibers-hzvt-20250404": {
+          "source_input_filename": "s5_07997_02997_05497_256_0000.tif",
+          "source_input_name_listed": true,
+          "evaluated_case_name_listed": true
+        }
+      },
+      "checkpoint_augmented_dataset_case_membership": "awaiting_original_checkpoint_dataset_manifest_and_parent_map",
+      "checkpoint_fold0_train_or_validation_membership": "awaiting_original_fold0_split"
+    },
+    {
+      "case": "s1_00497_01497_03997_256",
+      "source_case": "s1_00497_01497_03997_256",
+      "evaluation_role": "preregistered whole-pipeline spatial postprocessor/comparator parameter-heldout",
+      "role_source": "research/whole-pipeline-spatial-results.json",
+      "source_crop_offset_zyx": [
+        0,
+        0,
+        0
+      ],
+      "public_source_membership": {
+        "Dataset002_sk-fibers-hzvt-20250228": {
+          "source_input_filename": "s1_00497_01497_03997_256_0000.tif",
+          "source_input_name_listed": true,
+          "evaluated_case_name_listed": true
+        },
+        "Dataset003_sk-fibers-hzvt-20250404": {
+          "source_input_filename": "s1_00497_01497_03997_256_0000.tif",
+          "source_input_name_listed": true,
+          "evaluated_case_name_listed": true
+        }
+      },
+      "checkpoint_augmented_dataset_case_membership": "awaiting_original_checkpoint_dataset_manifest_and_parent_map",
+      "checkpoint_fold0_train_or_validation_membership": "awaiting_original_fold0_split"
+    },
+    {
+      "case": "s5_06622_02122_04122_256",
+      "source_case": "s5_06494_01994_03994_512",
+      "evaluation_role": "preregistered whole-pipeline spatial postprocessor/comparator parameter-heldout",
+      "role_source": "research/whole-pipeline-spatial-results.json",
+      "source_crop_offset_zyx": [
+        128,
+        128,
+        128
+      ],
+      "public_source_membership": {
+        "Dataset002_sk-fibers-hzvt-20250228": {
+          "source_input_filename": "s5_06494_01994_03994_512_0000.tif",
+          "source_input_name_listed": true,
+          "evaluated_case_name_listed": false
+        },
+        "Dataset003_sk-fibers-hzvt-20250404": {
+          "source_input_filename": "s5_06494_01994_03994_512_0000.tif",
+          "source_input_name_listed": true,
+          "evaluated_case_name_listed": false
+        }
+      },
+      "checkpoint_augmented_dataset_case_membership": "awaiting_original_checkpoint_dataset_manifest_and_parent_map",
+      "checkpoint_fold0_train_or_validation_membership": "awaiting_original_fold0_split"
+    }
+  ],
+  "interpretation": {
+    "source_name_membership": "all eight evaluated ROIs have source names in both observed public HZVT corpora; seven use direct source cubes and one uses a declared crop of a listed 512-cube parent",
+    "checkpoint_membership": "the checkpoint names Dataset003_sk-fibers_hzvt-augmented-2; original dataset items, augmentation parents and fold-0 split provide its per-case model exposure record",
+    "heldout_scope": "postprocessor/comparator parameter freeze and first reference-performance order, as declared by each original study",
+    "measurement_changes": 0
+  },
+  "required_original_artifacts": [
+    "The checkpoint-linked 18-item augmented dataset manifest with original item IDs.",
+    "The mapping of each augmented item to its original scan/cube, including spatial crop/rotation identity.",
+    "The actual fold-0 train and validation split (splits_final.json or an equivalent original record)."
+  ]
+}

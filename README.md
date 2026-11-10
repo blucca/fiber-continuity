@@ -28,8 +28,11 @@ The DP-specific gate fails in both cases, with all four radius-2 brackets
 negative; its s1 radius-3 changes are **−3.60780% / −2.24525%**. All **21,977**
 legacy-clean segments and **35,799** segments in two new current-raw positive
 controls pass the unchanged native family validator, preserving original gaps.
-The fixed checkpoint has **18 training samples**, fold **0**; per-case training
-list/split membership is pending. Prospective scope is postprocessor/comparator
+The fixed checkpoint declares an **18-item labeled dataset pool** and fold **0**.
+The [fixed-model source registry](research/fixed-model-training-provenance.json)
+records all eight evaluated ROI source names in the dated public HZVT corpora;
+the original augmented-item and fold-0 train/validation manifests provide the
+remaining per-case model exposure record. Prospective scope is postprocessor/comparator
 parameter holdout and first reference performance in the two declared ROIs.
 
 [Full prospective report](research/whole-pipeline-spatial-validation.md) ·
@@ -247,8 +250,9 @@ one baseline-only and one CT-only pair change the composition. Raw deployment
 is stopped: r2 observed switches 4 versus 3, r3 6 versus 4. Radius 3 matched-clean
 coverage and continuity decrease; full, matched, unknown and ambiguous totals
 are in the [complete study](research/bounded-logit-study.md#first-s1-postprocessor-parameter-holdout).
-The pretrained model's 18 training cases and their original membership remain
-separate provenance; the heldout protocol concerns the postprocessor parameters.
+The pretrained model's declared 18-item labeled pool and original augmented-item/
+fold-0 membership are recorded in the [source registry](research/fixed-model-training-provenance.json);
+the heldout protocol concerns the postprocessor parameters.
 Historical research notes retain their publication snapshots. Native VC3D UI replay
 is a separate protocol; its execution count here is 0.
 
