@@ -1,0 +1,153 @@
+{
+  "version": 1,
+  "frozen_utc": "2026-11-10T12:06:44.545921+00:00",
+  "task": "Prospective whole-pipeline spatial validation, fixed model and fixed source-pinned methods",
+  "selection_rule": "Lexicographically first unscored native 256 s1 case; lexicographically first native 512 s5 case with deterministic centre [128:384]^3 crop. Selection uses original ZIP names, never CT, manual topology or performance. All three s5 native 256 cases are already revealed.",
+  "case_role": "new spatial postprocessor/comparator parameter-heldout; pretrained-model membership retained as separate provenance",
+  "cases": [
+    {
+      "case": "s1_00497_01497_03997_256",
+      "source_case": "s1_00497_01497_03997_256",
+      "nml": "fibers_s1a_00497z_01497y_03997x_256_v00.nml",
+      "source_origin_zyx": [
+        497,
+        1497,
+        3997
+      ],
+      "source_shape_zyx": [
+        256,
+        256,
+        256
+      ],
+      "crop_origin_zyx": [
+        0,
+        0,
+        0
+      ],
+      "origin_zyx": [
+        497,
+        1497,
+        3997
+      ],
+      "origin_xyz": [
+        3997,
+        1497,
+        497
+      ],
+      "shape_zyx": [
+        256,
+        256,
+        256
+      ]
+    },
+    {
+      "case": "s5_06622_02122_04122_256",
+      "source_case": "s5_06494_01994_03994_512",
+      "nml": "fibers_s5_06494z_01994y_03994x_512_v03.nml",
+      "source_origin_zyx": [
+        6494,
+        1994,
+        3994
+      ],
+      "source_shape_zyx": [
+        512,
+        512,
+        512
+      ],
+      "crop_origin_zyx": [
+        128,
+        128,
+        128
+      ],
+      "origin_zyx": [
+        6622,
+        2122,
+        4122
+      ],
+      "origin_xyz": [
+        4122,
+        2122,
+        6622
+      ],
+      "shape_zyx": [
+        256,
+        256,
+        256
+      ]
+    }
+  ],
+  "source_pins": {
+    "fixed_dp": "1afa30ab840f7606f0b6594213731c5a88202c61",
+    "old_pipeline_cleanup": "c3d9da6fe42c3bb46fd2603ca060845d843296c3",
+    "public_matcher_evaluator": "8c90536373bc98e09689e042074e017a1afd5364",
+    "current_author": "bee798f72751169065fe020d4ad02c52519c2d2b",
+    "segmentation_model": "scrollprize/fiber_hz_vt@0905e68f14b33d1b98fd32d726f2c97607dea80c"
+  },
+  "frame": {
+    "array_axes": "ZYX",
+    "geometry_axes": "ROI-local XYZ",
+    "voxel_size_xyz_um": [
+      7.91,
+      7.91,
+      7.91
+    ],
+    "source_full_cube_preserved": true,
+    "reference_rule": "All original NML nodes, edges, IDs and branches retained; local XYZ and inside flags rebased to declared crop. Existing evaluator clips edge intersections with that ROI."
+  },
+  "geometries": {
+    "old_baseline_clean": "Original mature spline/catalog/gap MLP, then native 45-degree/100-voxel/16-voxel cleanup",
+    "old_dp_clean": "Same original raw input plus immutable 1afa30ab DP then same native cleanup",
+    "current_raw": "Current bee798f7 author defaults on shared fixed input; threads capped at 2",
+    "current_clean": "Same current raw plus the identical native cleanup"
+  },
+  "pairs": [
+    {
+      "candidate": "old_dp_clean",
+      "comparator": "current_raw",
+      "role": "primary"
+    },
+    {
+      "candidate": "old_dp_clean",
+      "comparator": "current_clean",
+      "role": "companion"
+    },
+    {
+      "candidate": "old_baseline_clean",
+      "comparator": "current_raw",
+      "role": "architecture_control"
+    },
+    {
+      "candidate": "old_baseline_clean",
+      "comparator": "current_clean",
+      "role": "architecture_control"
+    },
+    {
+      "candidate": "old_dp_clean",
+      "comparator": "old_baseline_clean",
+      "role": "DP_specific"
+    }
+  ],
+  "matching_rule": "Unchanged public match_coverage.py: r2 longest-first whole-curve lower/upper brackets and coverage residuals, identical prefixes at r3",
+  "gates": {
+    "primary": "Both new cases, both r2 brackets: continuity relative gain >0 and observed interior/boundary switches held or reduced at both r2/r3",
+    "companion": "Same independent gate against current equally native-cleaned output",
+    "DP_specific": "Same independent gate against legacy native-clean baseline; separate from architecture controls",
+    "native": "Unchanged assigned-family validator on every adjacent segment of all four legacy clean outputs; all original gaps, IDs, order and annotations preserved"
+  },
+  "complete_output": "40 matched rows, 16 unique full rows, raw/current and clean operating contracts; unknown/ambiguous/support/coverage residuals/r3 negative results all retained",
+  "reference_open_order": "Actual immutable public freeze receipt before new NML intake; reference performance opens only after fixed CT/P and every geometry is terminal",
+  "changes": {
+    "new_models": 0,
+    "parameter_searches": 0,
+    "whole_volume_runs": 0,
+    "new_surface_fit": 0
+  },
+  "stop_rule": "Any failed gate limits the corresponding recommendation to its measured scope. No post-result parameter/model/crop search. Runtime/data failure stops this execution at its actual failure; fixed-source repair only for concrete invocation faults.",
+  "shared_input": {
+    "CT": "uint8 256^3 ZYX cube, original fixed upstream normalization/inference",
+    "probabilities": "Original four-channel FP32 CZYX probabilities",
+    "current_native_VH": "(rint(255 * P[family]) + 0.5 * rint(255 * P[intersection])) / 255",
+    "legacy": "Exactly original fixed t60/b40 native mature-pipeline adapter",
+    "reference_as_predictor_input": false
+  }
+}
