@@ -1,5 +1,10 @@
 # First continuous-path spatial validation
 
+Source-pinned spline/gap-pipeline result below. The later
+[current medial-ridge AFV transfer](current-medial-ridge-transfer.md) retains
+the same DP and fixed-model input and fails both current-emitter default
+gates; its complete raw/clean and native family-contract results are separate.
+
 **Both newly held-out cubes pass the published native-clean radius2 gate:** common-coverage lower-bracket continuity improves **5.581%** in s1 and **0.939%** in s5, with observed interior/boundary switch counts unchanged. Upper-bracket gains are 5.581% and 3.029%. Radius3 clean sensitivity increases in s1 and decreases in s5.
 
 [![All six native-clean comparisons, including the preceding negative development case and radius 3 sensitivity](centre-path-comparison.svg)](centre-path-comparison.svg)

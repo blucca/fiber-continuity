@@ -1,14 +1,17 @@
 #!/usr/bin/env python3
-"""Five small synthetic checks; optionally write a synthetic CLI example."""
+"""Six evaluator/comparison checks; optionally write NML/JSON and AFV fixtures."""
 import argparse
 import json
 from pathlib import Path
+import sqlite3
 import xml.etree.ElementTree as ET
 
 import numpy as np
 
 from evaluate import Parameters, evaluate, prepare_reference
 from nml_to_reference import summarize_nml
+from afv_to_traces import read_afv
+from match_coverage import match_coverage, summary
 
 
 def toy_reference(specs, origin_xyz=(100, 200, 300), size=64):
@@ -88,12 +91,27 @@ def synthetic_checks():
     assert fragmented['coverage']['manual_edge_length_coverage'] == 1
     assert abs(fragmented['coverage']['path_length_weighted_same_chain_continuity'] - 0.55) < 1e-8
     assert fragmented['connectivity']['cross_tree_switch_count'] == 0
+
+    paired_reference = toy_reference([a, b])
+    rich = {'curves': [{'id': '2', 'points_xyz': b[1]}, {'id': '10', 'points_xyz': a[1]}]}
+    lean = {'curves': [{'id': 'bridge', 'points_xyz':
+            [[8, 10, 12], [28, 10, 12], [28, 26, 12], [8, 26, 12]]}]}
+    for baseline, dp, normalized in ((lean, rich, 'dp'), (rich, lean, 'baseline')):
+        matched = match_coverage(paired_reference, baseline, dp, 'synthetic-matched')
+        assert matched['normalized'] == normalized and len(matched['rows']) == 4
+        assert [c['id'] for c in matched['prefixes']['below']['curves']] == ['10']
+        assert [c['id'] for c in matched['prefixes']['above']['curves']] == ['10', '2']
+        for row in matched['rows']:
+            selected = matched['prefixes'][row['bracket']]['curves']
+            assert row[normalized] == summary(evaluate(paired_reference, selected,
+                Parameters(radius_vox=float(row['radius_vox']))))
     result = {'status': 'PASS', 'checks': [
         'degree3 identity, original-edge partition and complete coverage',
         'sustained cross-tree bridge with interior/boundary separation',
         'unknown and ambiguous arcs with zero eligible support',
         'XYZ axes and explicit global-to-local origin',
-        'full coverage with fragmented same-chain continuity'],
+        'full coverage with fragmented same-chain continuity',
+        'matched-r2 brackets, string-ID tie and identical r3 prefixes'],
         'synthetic_complete_coverage': 1.0, 'synthetic_bridge_interior_switches': 1,
         'synthetic_fragmented_coverage': 1.0, 'synthetic_fragmented_continuity': 0.55}
     json.dumps(result, allow_nan=False)
@@ -124,6 +142,38 @@ def write_example(folder, reference, curves):
     assert prepare_reference(converted).summary['degree3_node_count'] == 1
     (folder / 'reference.json').write_text(json.dumps(converted, indent=2) + '\n')
     (folder / 'traces.json').write_text(json.dumps(curves, indent=2) + '\n')
+
+    # Hand-built reader fixture: one 600-segment fiber crosses three blocks.
+    # Real writer/reader parity is separately measured on all 363 author fibers.
+    path = folder / 'reader.afv'
+    path.unlink(missing_ok=True)
+    origin = np.array([7, 11, 13])
+    local = np.column_stack([np.linspace(2.5, 600.5, 601),
+                             np.full(601, 4.5), np.full(601, 6.5)])
+    points = local + origin
+    with sqlite3.connect(path) as db:
+        db.executescript('''PRAGMA application_id=1447249475;
+            PRAGMA user_version=1;
+            CREATE TABLE metadata(key TEXT PRIMARY KEY, value TEXT);
+            CREATE TABLE fibers(id INTEGER, family TEXT, point_count INTEGER, length REAL);
+            CREATE TABLE blocks(fiber_id INTEGER, first_segment INTEGER, points BLOB);''')
+        metadata = {'complete': True, 'root': {'coordinate_order': 'XYZ'},
+                    'frame': {'vc_open_data_source_coordinate_scale_factor': 1,
+                              'vc_open_data_source_original_resolution': 7.91}}
+        db.executemany('INSERT INTO metadata VALUES(?,?)',
+                       [(k, json.dumps(v)) for k, v in metadata.items()])
+        db.execute('INSERT INTO fibers VALUES(?,?,?,?)',
+                   (7, 'V', len(points), float(np.linalg.norm(np.diff(points, axis=0), axis=1).sum())))
+        for first in range(0, len(points) - 1, 256):
+            db.execute('INSERT INTO blocks VALUES(?,?,?)',
+                       (7, first, points[first:first + 257].astype('<f8').tobytes()))
+    imported = read_afv(path, 'synthetic-afv', origin.tolist())
+    curve, = imported['curves']
+    assert curve['id'] == 'afv/7' and curve['family'] == 'V' and curve['gaps'] == []
+    assert np.array_equal(curve['points_xyz'], points - origin)
+    assert len(curve['points_xyz']) == 601
+    (folder / 'afv-check.json').write_text(json.dumps(
+        {'status': 'PASS', 'points': 601, 'blocks': 3, 'binary64_overlap_origin_ID': 'exact'}) + '\n')
 
 
 if __name__ == '__main__':

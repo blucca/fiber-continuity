@@ -2,6 +2,10 @@
 
 Status: **fixed research method; the following four-cube development snapshot is preserved.** The [first two new-spatial validation results](continuous-path-spatial-validation.md) now pass the published native-clean radius2 gate; all radius3 and negative results are recorded. At the immutable source freeze, their reference-performance/image reads were0.
 
+The later [current medial-ridge AFV transfer](current-medial-ridge-transfer.md)
+fails the current-emitter default gates. The earlier source-pinned results
+below retain their original comparator and fresh-test scope.
+
 The centre path jointly chooses 29 transverse states every ≤1 voxel along the original arc. Each state is within 1.5 voxels of the mature spline/MLP trace. Unary evidence is fixed-model family+intersection logit plus CT DoG/MAD, with the original radial prior and probability gate. The integrated score uses original-arc trapezoid weights. Dynamic programming maximizes it minus `2 |d_i−d_(i−1)|² / Δs`, where displacement differences are in world XYZ and stay invariant to transverse-frame state ordering. The finite-state optimum is evaluated before the shared Gaussian post-smoother. All reported geometry metrics use the final smoothed output.
 
 The causal control selects the highest unary at exactly the same stations. Both operators share finite-domain context, zero fallback, pinned endpoints, fixed σ2 smoother, original knots/IDs/gaps, and the native 45°/100-voxel/16-voxel-black cleanup. Topology edits: 0. The older Gaussian-at-original-knots method retains its separate four-cube failure report.

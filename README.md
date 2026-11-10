@@ -1,10 +1,28 @@
 # Fiber Continuity
 
-**Continuous center paths for papyrus fibers:** a bounded CT + fixed-model path optimizer, measured against the mature spline pipeline on original manual graphs.
+**Annotation-aware AFV evaluation and center-path research for papyrus fibers:** original manual graph identity, native archive input and complete source-pinned comparisons.
 
 The dynamic program jointly selects transverse positions along each existing fiber. It preserves topology, source IDs, endpoints and gap provenance, then uses the original native cleanup. A same-station pointwise control isolates the path-selection change.
 
 ## Current result
+
+The [current author's medial-ridge AFV defaults](research/current-medial-ridge-transfer.md)
+win the fixed-DP transfer comparison on both already-inspected cubes using the
+existing `fiber_hz_vt` input. Keep the author's original geometry at this
+operating point:
+
+| Scroll | Raw matched-radius-2 continuity change, lower / upper | Same native cleanup, lower / upper |
+|---|---:|---:|
+| s1 | −2.110% / −2.145% | +1.676% / −0.222% |
+| s5 | −10.692% / −10.729% | −7.700% / −8.518% |
+
+s1 radius-3 observed interior switches increase from 6 to 10. The author's
+unchanged native family validator passes all 27,031 original segments; fixed
+DP violates that contract in 17 segments. Default migration to this current
+emitter stops. [All full/matched rows and native audit](research/current-medial-ridge-results.json).
+The recommended V2 model is a separate, untested input in this study.
+
+### Earlier source-pinned spline-pipeline validation
 
 After an [immutable source/parameter freeze](https://github.com/blucca/fiber-continuity/tree/1afa30ab840f7606f0b6594213731c5a88202c61), two fresh spatial parameter-heldout cubes pass the published native-clean radius 2 gate:
 
@@ -25,6 +43,29 @@ Regenerate this figure from the published aggregates: `python research/plot-cent
 
 The measured scope is fixed-model centering after native cleanup on partial manual references. Whole-volume deployment and surface-quality stages follow their own downstream measurements.
 
+## Read an author's native AFV
+
+[`afv_to_traces.py`](afv_to_traces.py) reads the measured binary64 SQLite AFV
+schema, retaining IDs, family, point order, one shared block endpoint and
+metadata. All points in the two author-generated archives match exactly.
+
+```bash
+python afv_to_traces.py --afv data/default.afv --case same-ROI \
+  --origin-xyz 0 0 0 --output data/default-traces.json
+python evaluate.py --reference data/reference.json --traces data/default-traces.json \
+  --case same-ROI --radius 2 --output results/default-r2.json
+```
+
+ROI-local AFV uses zero origin; full-volume AFV uses the NML ROI's global XYZ
+origin. The importer reads the supplied archive into memory, so use ROI-sized
+archives for these comparisons. `check.py --examples temp/synthetic` also
+checks a hand-built 601-point, three-block AFV fixture.
+
+[`match_coverage.py`](match_coverage.py) compares two same-frame trace outputs
+using fixed radius-2 longest-first whole-curve lower/upper brackets, then
+reuses the exact prefixes at radius 3. It includes all full/matched metrics
+and selected curves. [Complete current-comparator commands](research/current-medial-ridge-transfer.md#repeat-the-fixed-comparison).
+
 ## Native typed object handoff
 
 [`native_v4_store`](native/README.md) bridges ROI-local trace envelopes through native V4 polyline JSON into a checked `.vcobj`, closes/read-only reopens it, and verifies immutable typed fiber loads and volume-frame identity. The pinned native library passed the all-synthetic fixture and real trace archives, including the fresh s1 baseline (78 curves) and DP (79 curves). [Aggregate fresh native check](native/heldout-check.json). The small C++ CLI uses the existing native targets with the Python/server stack disabled.
@@ -42,9 +83,10 @@ python evaluate.py --reference temp/synthetic/reference.json \
   --traces temp/synthetic/traces.json --output temp/synthetic/metrics-r2.json
 ```
 
-Five executable synthetic checks cover original-edge/degree-3 identity,
+Six executable synthetic checks cover original-edge/degree-3 identity,
 sustained switches with ROI-boundary separation, unknown/ambiguous support,
-XYZ/global-origin handling, and full coverage with fragmented continuity.
+XYZ/global-origin handling, full coverage with fragmented continuity, and
+matched-coverage brackets with identical radius-3 prefixes.
 The example NML and JSON are hand-authored synthetic geometry.
 
 ## Use original manual fibers
