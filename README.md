@@ -172,3 +172,7 @@ X-ray CT.* [arXiv:2304.02084](https://arxiv.org/abs/2304.02084).
 
 Research code authored by Codex; repository maintained by blucca. Manual fiber
 annotations and upstream models/methods are credited to their original authors.
+
+### Additional spatial validation
+
+[Ownership safety study and validation freeze](research/ownership-safety-study.md): the unchanged CT method is primary on two extra spatial cubes. A complete persistent-marker guard produced 0 fallbacks on the two revealed development cubes and is retained as a negative control. The new reference-based results will be appended after the predeclared comparison.
