@@ -1,8 +1,22 @@
 # Fiber Continuity
 
-**Annotation-aware AFV evaluation and center-path research for papyrus fibers:** original manual graph identity, native archive input and complete source-pinned comparisons.
+**Check whether traced lines stay on the same papyrus fibers.** Import a native AFV
+file and hand-labelled fibers for the same crop; measure how much reference fiber
+is found, how far each line stays on one fiber, and jumps to neighbouring fibers.
+The native adapters retain original IDs, coordinate frames and declared gaps.
 
-The dynamic program jointly selects transverse positions along each existing fiber. It preserves topology, source IDs, endpoints and gap provenance, then uses the original native cleanup. A same-station pointwise control isolates the path-selection change.
+## In plain English
+
+On the two preregistered test cubes with the same fixed prediction model:
+
+- **Find more fiber overall:** current AFV's raw output covers more of the labelled fibers.
+- **Compare continuous chains:** after matching roughly the same reference-fiber coverage,
+  the older spline/gap tracer with native cleanup keeps more of it in unbroken same-fiber chains.
+- **Extra DP step:** the trace-adjustment add-on failed its improvement test against
+  that older cleaned baseline on both new cubes, so its default upgrade is stopped.
+
+The useful handoff is the AFV/manual-fiber checker and native export. The measurements
+and complete positive/negative research history follow below.
 
 ## Prospective spatial validation — simpler matched-coverage operating point
 
@@ -41,6 +55,10 @@ parameter holdout and first reference performance in the two declared ROIs.
 Fixed-model training membership and the new postprocessor parameter holdout
 are recorded separately. The earlier comparisons below retain their own
 source, comparator and time windows.
+
+## Archived center-path method
+
+The dynamic program jointly selects transverse positions along each existing fiber. It preserves topology, source IDs, endpoints and gap provenance, then uses the original native cleanup. A same-station pointwise control isolates the path-selection change.
 
 ## Earlier revealed two-case whole-pipeline benchmark
 
