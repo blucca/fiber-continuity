@@ -1,0 +1,70 @@
+{
+  "parameters": {
+    "station_step_max_vox": 1.0,
+    "incoming_tangent_support_vox": 8.0,
+    "context_radius_vox": 8.0,
+    "transverse_grid_step_vox": 0.5,
+    "displacement_radius_vox": 1.5,
+    "candidate_count": 29,
+    "probability_gate": 0.5,
+    "probability_logit_clip": 1e-05,
+    "displacement_prior": "r2/8",
+    "ct_fine_sigma_vox": 1.0,
+    "ct_fine_truncate": 4.0,
+    "ct_background_sigma_vox": 2.0,
+    "ct_background_truncate": 2.0,
+    "ct_mad_radius_vox": 6.0,
+    "ct_mad_scale": 1.4826,
+    "ct_mad_floor_gray": 1.0,
+    "integration": "original-arc trapezoid weights",
+    "world_transition_diffusion_vox2_per_arc_vox": 0.25,
+    "world_transition_cost": "2*norm(d_i-d_previous)^2 / delta_original_arc",
+    "allowed_transitions": "all finite states; soft continuity cost",
+    "unsupported_station": "zero displacement, neutral unary",
+    "endpoint_selected_state": "zero in both operators",
+    "post_smoothing_sigma_vox": 2.0,
+    "post_smoothing_step_max_vox": 0.5,
+    "post_smoothing": "same pinned original-arc Gaussian/transverse/domain/cap/endpointpin",
+    "topology_edits": 0,
+    "primary": "dp",
+    "causal_control": "pointwise"
+  },
+  "source_sha256": {
+    "centre_path.py": "796dad08af8ff4a31fa8ad9de392df7df6d2dfc8ce1e06ae596badb587527e6f",
+    "logit_maps.py": "1d477bb7897b373edf55e7f730b8de9a8357271529b3fa142a4a22bd1574e82e",
+    "bounded_logit_recenter.py": "2894e26b2bd3456c0f5d5b3920ad111b164f296f04f12d7d218954210d57e9ed",
+    "transverse_centering.py": "674fd41b82ca6de98f3282dc4e58ce0e052c61025fb3ae094505a56faa331266"
+  },
+  "evaluator_sha256": "e46cb2dd5579231fefe8b33fd4173393496fdc10ad29e6525b7de39d06fbb010",
+  "native_source_pin": "c3d9da6fe42c3bb46fd2603ca060845d843296c3",
+  "unitcheck": [
+    "exact DP exhaustive optimum",
+    "world state reordering",
+    "actual flat CT identity",
+    "actual single ridge bounded shift and ID/gaps/endpoints",
+    "actual gate-empty neutral state"
+  ],
+  "cases": [
+    "s5_03997_01497_03997_256",
+    "s1_00497_02497_02997_256",
+    "s1_10997_02997_02997_256",
+    "s5_14997_01497_01497_256"
+  ],
+  "case_role": "all four revealed development; future heldout separate",
+  "parameter_grid_searches": 0,
+  "frozen_utc": "2026-11-10T01:01:24.707814+00:00",
+  "status": "public method freeze for first two new spatial postprocessor-heldouts",
+  "primary_stage": "native-clean",
+  "primary_radius_vox": 2,
+  "control": "same-station pointwise; full r2/r3 raw/clean",
+  "heldout_cases": [
+    "s1_08997_02997_02497_256",
+    "s5_07997_02997_05497_256"
+  ],
+  "matched_protocol": "longest-first whole-curve lower/upper r2 common-C; identical retained prefixes at r3",
+  "heldout_gate": "both fresh cases: clean r2 continuity above baseline in both brackets, observed clean interior/boundary switches no greater at r2/r3 in either bracket; publish all raw/clean and r2/r3 rows",
+  "heldout_reference_performance_reads_at_freeze": 0,
+  "heldout_image_reads_at_freeze": 0,
+  "heldout_parameter_tuning": 0,
+  "public_freeze_prepared_utc": "2026-11-10T01:38:25.620814+00:00"
+}

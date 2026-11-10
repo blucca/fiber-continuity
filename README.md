@@ -18,6 +18,8 @@ cleanup is included: the first two cubes improve clean radius2 matched continuit
 records geometry-only ranking, emitted-reverse scope and the complete native
 augmentation side-study results.
 
+The [continuous centre-path study](research/continuous-centre-path-study.md) freezes an exact finite-state path optimizer with a same-station pointwise control. Complete four-cube development comparisons and executable geometry are public; three cubes improve radius2 continuity and one decreases it. New spatial validation follows the published clean-stage gate.
+
 ## Native typed object handoff
 
 [`native_v4_store`](native/README.md) converts native V4 polyline JSON into a checked `.vcobj`, then closes/reopens it and verifies immutable typed fiber loads and volume-frame identity. The pinned native library passed both real baseline/CT trace archives and the included all-synthetic fixture. The small C++ CLI uses the existing native targets with the Python/server stack disabled.
