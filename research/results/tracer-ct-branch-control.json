@@ -1,0 +1,696 @@
+{
+  "status": "complete",
+  "started_utc": "2026-11-10T16:09:26.070659+00:00",
+  "plan": "plan.json",
+  "branches": [
+    {
+      "CT_branch": "lower_CT_branch",
+      "physical_score_target": 0,
+      "prepared_seed_catalog": {
+        "total": 31,
+        "starts": [
+          0,
+          31
+        ],
+        "primary_counts": [
+          31
+        ]
+      },
+      "prepared_start_seed": {
+        "zyx_tracing": [
+          8,
+          10,
+          10
+        ],
+        "xyz_tracing": [
+          10,
+          10,
+          8
+        ],
+        "xyz_native": [
+          20.5,
+          20.5,
+          16.5
+        ],
+        "generated_primary": true,
+        "seed_flag": 2,
+        "presence_u8": 184,
+        "centrality_u16": 18400,
+        "eligible_primary_candidates": 3
+      },
+      "raw": {
+        "curve_count": 1,
+        "points": 84,
+        "all_segments": 83,
+        "original_P_invalid_segments": 0,
+        "arc_tracing_vox": 62.514477372169495,
+        "arc_native_vox": 125.02895474433899,
+        "longest_curve_arc_tracing_vox": 62.514477372169495,
+        "layer_event_count": 0,
+        "unknown_points": 0,
+        "opposite_layer_points": 0,
+        "split_count": 0,
+        "length_comparisons": {
+          "initial_raw": {
+            "arc_ratio": 0.9999553975296848,
+            "longest_curve_ratio": 0.9999553975296848,
+            "delta_native_vox": -0.0055768489837646484
+          },
+          "initial_finished": {
+            "arc_ratio": 1.0023404802088904,
+            "longest_curve_ratio": 1.0023404802088904,
+            "delta_native_vox": 0.2919445037841797
+          },
+          "correct_seed_zero_coverage_raw": {
+            "arc_ratio": 0.9952801473173324,
+            "longest_curve_ratio": 0.9952801473173324,
+            "delta_native_vox": -0.59291672706604
+          }
+        },
+        "curves": [
+          {
+            "points": 84,
+            "arc_tracing_vox": 62.514477372169495,
+            "arc_native_vox": 125.02895474433899,
+            "start_xyz_tracing": [
+              0.25,
+              10.0,
+              8.0
+            ],
+            "end_xyz_tracing": [
+              62.550048828125,
+              10.0,
+              7.951075077056885
+            ],
+            "start_physical_label": 0,
+            "end_physical_label": 0,
+            "layer_events": [],
+            "unknown_points": 0,
+            "opposite_layer_points": 0,
+            "all_segments": 83,
+            "original_P_invalid_segments": 0
+          }
+        ],
+        "maximum_normal_deviation_to_target_native_vox": 0.6963291168212891
+      },
+      "finished": {
+        "curve_count": 1,
+        "points": 79,
+        "all_segments": 78,
+        "original_P_invalid_segments": 0,
+        "arc_tracing_vox": 62.31660312414169,
+        "arc_native_vox": 124.63320624828339,
+        "longest_curve_arc_tracing_vox": 62.31660312414169,
+        "layer_event_count": 0,
+        "unknown_points": 0,
+        "opposite_layer_points": 0,
+        "split_count": 0,
+        "length_comparisons": {
+          "initial_raw": {
+            "arc_ratio": 0.9967902839325644,
+            "longest_curve_ratio": 0.9967902839325644,
+            "delta_native_vox": -0.4013253450393677
+          },
+          "initial_finished": {
+            "arc_ratio": 0.9991678172174302,
+            "longest_curve_ratio": 0.9991678172174302,
+            "delta_native_vox": -0.10380399227142334
+          },
+          "correct_seed_zero_coverage_raw": {
+            "arc_ratio": 0.9921298320782723,
+            "longest_curve_ratio": 0.9921298320782723,
+            "delta_native_vox": -0.9886652231216431
+          }
+        },
+        "curves": [
+          {
+            "points": 79,
+            "arc_tracing_vox": 62.31660312414169,
+            "arc_native_vox": 124.63320624828339,
+            "start_xyz_tracing": [
+              0.25,
+              10.0,
+              8.0
+            ],
+            "end_xyz_tracing": [
+              62.550048828125,
+              10.0,
+              7.951075077056885
+            ],
+            "start_physical_label": 0,
+            "end_physical_label": 0,
+            "layer_events": [],
+            "unknown_points": 0,
+            "opposite_layer_points": 0,
+            "all_segments": 78,
+            "original_P_invalid_segments": 0
+          }
+        ],
+        "maximum_normal_deviation_to_target_native_vox": 0.6686248779296875
+      },
+      "long_chain_retention_gate": true,
+      "branch_gate": true,
+      "H_preserved_exact": true,
+      "maximum_normal_deviation_to_target_native_vox": 0.6963291168212891
+    },
+    {
+      "CT_branch": "upper_CT_branch",
+      "physical_score_target": 1,
+      "prepared_seed_catalog": {
+        "total": 34,
+        "starts": [
+          0,
+          34
+        ],
+        "primary_counts": [
+          34
+        ]
+      },
+      "prepared_start_seed": {
+        "zyx_tracing": [
+          12,
+          10,
+          10
+        ],
+        "xyz_tracing": [
+          10,
+          10,
+          12
+        ],
+        "xyz_native": [
+          20.5,
+          20.5,
+          24.5
+        ],
+        "generated_primary": true,
+        "seed_flag": 2,
+        "presence_u8": 140,
+        "centrality_u16": 14000,
+        "eligible_primary_candidates": 3
+      },
+      "raw": {
+        "curve_count": 1,
+        "points": 84,
+        "all_segments": 83,
+        "original_P_invalid_segments": 0,
+        "arc_tracing_vox": 62.48832726478577,
+        "arc_native_vox": 124.97665452957153,
+        "longest_curve_arc_tracing_vox": 62.48832726478577,
+        "layer_event_count": 0,
+        "unknown_points": 0,
+        "opposite_layer_points": 0,
+        "split_count": 0,
+        "length_comparisons": {
+          "initial_raw": {
+            "arc_ratio": 0.9995371113642473,
+            "longest_curve_ratio": 0.9995371113642473,
+            "delta_native_vox": -0.0578770637512207
+          },
+          "initial_finished": {
+            "arc_ratio": 1.0019211963518653,
+            "longest_curve_ratio": 1.0019211963518653,
+            "delta_native_vox": 0.23964428901672363
+          },
+          "correct_seed_zero_coverage_raw": {
+            "arc_ratio": 0.9948638168316067,
+            "longest_curve_ratio": 0.9948638168316067,
+            "delta_native_vox": -0.6452169418334961
+          }
+        },
+        "curves": [
+          {
+            "points": 84,
+            "arc_tracing_vox": 62.48832726478577,
+            "arc_native_vox": 124.97665452957153,
+            "start_xyz_tracing": [
+              62.18867874145508,
+              10.0,
+              9.999484062194824
+            ],
+            "end_xyz_tracing": [
+              0.25,
+              10.0,
+              12.0
+            ],
+            "start_physical_label": 1,
+            "end_physical_label": 1,
+            "layer_events": [],
+            "unknown_points": 0,
+            "opposite_layer_points": 0,
+            "all_segments": 83,
+            "original_P_invalid_segments": 0
+          }
+        ],
+        "maximum_normal_deviation_to_target_native_vox": 0.36319499214732787
+      },
+      "finished": {
+        "curve_count": 1,
+        "points": 79,
+        "all_segments": 78,
+        "original_P_invalid_segments": 0,
+        "arc_tracing_vox": 62.320982933044434,
+        "arc_native_vox": 124.64196586608887,
+        "longest_curve_arc_tracing_vox": 62.320982933044434,
+        "layer_event_count": 0,
+        "unknown_points": 0,
+        "opposite_layer_points": 0,
+        "split_count": 0,
+        "length_comparisons": {
+          "initial_raw": {
+            "arc_ratio": 0.9968603415214069,
+            "longest_curve_ratio": 0.9968603415214069,
+            "delta_native_vox": -0.3925657272338867
+          },
+          "initial_finished": {
+            "arc_ratio": 0.9992380419068675,
+            "longest_curve_ratio": 0.9992380419068675,
+            "delta_native_vox": -0.09504437446594238
+          },
+          "correct_seed_zero_coverage_raw": {
+            "arc_ratio": 0.9921995621157482,
+            "longest_curve_ratio": 0.9921995621157482,
+            "delta_native_vox": -0.9799056053161621
+          }
+        },
+        "curves": [
+          {
+            "points": 79,
+            "arc_tracing_vox": 62.320982933044434,
+            "arc_native_vox": 124.64196586608887,
+            "start_xyz_tracing": [
+              62.18867874145508,
+              10.0,
+              9.999484062194824
+            ],
+            "end_xyz_tracing": [
+              0.25,
+              10.0,
+              12.0
+            ],
+            "start_physical_label": 1,
+            "end_physical_label": 1,
+            "layer_events": [],
+            "unknown_points": 0,
+            "opposite_layer_points": 0,
+            "all_segments": 78,
+            "original_P_invalid_segments": 0
+          }
+        ],
+        "maximum_normal_deviation_to_target_native_vox": 0.2677784270235861
+      },
+      "long_chain_retention_gate": true,
+      "branch_gate": true,
+      "H_preserved_exact": true,
+      "maximum_normal_deviation_to_target_native_vox": 0.36319499214732787
+    }
+  ],
+  "source_sha256_before": {
+    "core.py": "1bd16ef7ef1156e0657b2db541290b76af22632102bd0d4742be7013707e0364",
+    "tracing.py": "b23618422a86dafd65049f2b9c8ef8edddabbfaaad4d883d1f90f7cafa61e839",
+    "prepare.py": "a9a9eef67c5070b5fb95705a054048bb899d46cffeb334611170e0b0d4eba254",
+    "storage.py": "866cdd2a4c6755c268b6688aa1dad5dbaa171361a645a247d8574013abcc4adf"
+  },
+  "CT_detection": {
+    "columns": 128,
+    "supported_peaks_each_column": 2,
+    "minimum_prominence": 25.0,
+    "CT_algorithm_oracle_inputs": 0
+  },
+  "original_family_gate_inputs": {
+    "native": "scene-dir/native-predictions.npy",
+    "pooled": "scene-dir/work/tracing.npy",
+    "pooled_sha256": "85025b95f193a1f5ccbcf3f416aed9175010238e97d3ff15677adb1fcf2fc19c",
+    "pooled_origin": "saved exact prepare_tracing result of original unmasked P",
+    "tolerance": 0.0001,
+    "maximum_tracing_step": 0.25
+  },
+  "branch_aware_coverage": {
+    "lower_tail_actual_seed": {
+      "zyx_tracing": [
+        8,
+        10,
+        52
+      ],
+      "xyz_tracing": [
+        52,
+        10,
+        8
+      ],
+      "xyz_native": [
+        104.5,
+        20.5,
+        16.5
+      ],
+      "generated_primary": true,
+      "seed_flag": 2,
+      "presence_u8": 140,
+      "centrality_u16": 14000,
+      "eligible_primary_candidates": 3
+    },
+    "lower_state_before_upper_trace": {
+      "count": 0,
+      "direction_bytes": [
+        0,
+        0
+      ],
+      "is_covered_same_dir": false
+    },
+    "lower_state_after_upper_trace": {
+      "count": 0,
+      "direction_bytes": [
+        0,
+        0
+      ],
+      "is_covered_same_dir": false
+    },
+    "upper_coverage_at_lower_tail_without_branch_filter": {
+      "count": 0,
+      "direction_bytes": [
+        0,
+        0
+      ],
+      "is_covered_same_dir": false
+    },
+    "lower_state_after_own_lower_trace": {
+      "count": 1,
+      "direction_bytes": [
+        255,
+        128
+      ],
+      "is_covered_same_dir": true
+    }
+  },
+  "score_oracle": {
+    "input": "score-oracle-tracing-xyz.npy",
+    "used_after_all_control_traces_and_finish": true,
+    "used_in_CT_algorithm": false,
+    "assignment": "nearest normal-Z physical centre at each tracing X; exact distance ties unknown",
+    "label_codes": {
+      "A": 0,
+      "B": 1,
+      "unknown": -1
+    },
+    "construction": "fixed parent PLAN float32 A/B centrelines, score-only after all control trace/finish calls; reconstruction checked equal to original saved reference"
+  },
+  "comparators": {
+    "initial_raw": {
+      "curve_count": 1,
+      "points": 84,
+      "family_segments": 83,
+      "family_invalid_segments": 0,
+      "arc_tracing_vox": 62.51726579666138,
+      "arc_native_vox": 125.03453159332275,
+      "longest_curve_arc_tracing_vox": 62.51726579666138,
+      "curves": [
+        {
+          "points": 84,
+          "arc_tracing_vox": 62.51726579666138,
+          "arc_native_vox": 125.03453159332275,
+          "raw_order_start": {
+            "xyz_tracing": [
+              0.25,
+              10.0,
+              8.0
+            ],
+            "xyz_native": [
+              1.0,
+              20.5,
+              16.5
+            ],
+            "artificial_sheet": "A",
+            "normal_distance_A_tracing": 0.0,
+            "normal_distance_B_tracing": 4.0
+          },
+          "raw_order_end": {
+            "xyz_tracing": [
+              62.4672966003418,
+              10.0,
+              9.943275451660156
+            ],
+            "xyz_native": [
+              125.4345932006836,
+              20.5,
+              20.386550903320312
+            ],
+            "artificial_sheet": "B",
+            "normal_distance_A_tracing": 1.9432754516601562,
+            "normal_distance_B_tracing": 0.05672454833984375
+          },
+          "left_endpoint": {
+            "xyz_tracing": [
+              0.25,
+              10.0,
+              8.0
+            ],
+            "xyz_native": [
+              1.0,
+              20.5,
+              16.5
+            ],
+            "artificial_sheet": "A",
+            "normal_distance_A_tracing": 0.0,
+            "normal_distance_B_tracing": 4.0
+          },
+          "right_endpoint": {
+            "xyz_tracing": [
+              62.4672966003418,
+              10.0,
+              9.943275451660156
+            ],
+            "xyz_native": [
+              125.4345932006836,
+              20.5,
+              20.386550903320312
+            ],
+            "artificial_sheet": "B",
+            "normal_distance_A_tracing": 1.9432754516601562,
+            "normal_distance_B_tracing": 0.05672454833984375
+          },
+          "artificial_B_tail_arc_tracing_vox": 34.64160621166229,
+          "family_segments": 83,
+          "family_invalid_segments": 0
+        }
+      ]
+    },
+    "initial_finished": {
+      "curve_count": 1,
+      "points": 79,
+      "family_segments": 78,
+      "family_invalid_segments": 0,
+      "arc_tracing_vox": 62.368505120277405,
+      "arc_native_vox": 124.73701024055481,
+      "longest_curve_arc_tracing_vox": 62.368505120277405,
+      "curves": [
+        {
+          "points": 79,
+          "arc_tracing_vox": 62.368505120277405,
+          "arc_native_vox": 124.73701024055481,
+          "raw_order_start": {
+            "xyz_tracing": [
+              0.25,
+              10.0,
+              8.0
+            ],
+            "xyz_native": [
+              1.0,
+              20.5,
+              16.5
+            ],
+            "artificial_sheet": "A",
+            "normal_distance_A_tracing": 0.0,
+            "normal_distance_B_tracing": 4.0
+          },
+          "raw_order_end": {
+            "xyz_tracing": [
+              62.4672966003418,
+              10.0,
+              9.943275451660156
+            ],
+            "xyz_native": [
+              125.4345932006836,
+              20.5,
+              20.386550903320312
+            ],
+            "artificial_sheet": "B",
+            "normal_distance_A_tracing": 1.9432754516601562,
+            "normal_distance_B_tracing": 0.05672454833984375
+          },
+          "left_endpoint": {
+            "xyz_tracing": [
+              0.25,
+              10.0,
+              8.0
+            ],
+            "xyz_native": [
+              1.0,
+              20.5,
+              16.5
+            ],
+            "artificial_sheet": "A",
+            "normal_distance_A_tracing": 0.0,
+            "normal_distance_B_tracing": 4.0
+          },
+          "right_endpoint": {
+            "xyz_tracing": [
+              62.4672966003418,
+              10.0,
+              9.943275451660156
+            ],
+            "xyz_native": [
+              125.4345932006836,
+              20.5,
+              20.386550903320312
+            ],
+            "artificial_sheet": "B",
+            "normal_distance_A_tracing": 1.9432754516601562,
+            "normal_distance_B_tracing": 0.05672454833984375
+          },
+          "artificial_B_tail_arc_tracing_vox": 33.58236759901047,
+          "family_segments": 78,
+          "family_invalid_segments": 0
+        }
+      ]
+    },
+    "correct_seed_zero_coverage_raw": {
+      "curve_count": 1,
+      "points": 84,
+      "family_segments": 83,
+      "family_invalid_segments": 0,
+      "arc_tracing_vox": 62.810935735702515,
+      "arc_native_vox": 125.62187147140503,
+      "longest_curve_arc_tracing_vox": 62.810935735702515,
+      "curves": [
+        {
+          "points": 84,
+          "arc_tracing_vox": 62.810935735702515,
+          "arc_native_vox": 125.62187147140503,
+          "raw_order_start": {
+            "xyz_tracing": [
+              0.9160515069961548,
+              10.0,
+              11.99976921081543
+            ],
+            "xyz_native": [
+              2.3321030139923096,
+              20.5,
+              24.49953842163086
+            ],
+            "artificial_sheet": "B",
+            "normal_distance_A_tracing": 3.9997692108154297,
+            "normal_distance_B_tracing": 0.0002307891845703125
+          },
+          "raw_order_end": {
+            "xyz_tracing": [
+              62.49999237060547,
+              10.0,
+              8.052959442138672
+            ],
+            "xyz_native": [
+              125.49998474121094,
+              20.5,
+              16.605918884277344
+            ],
+            "artificial_sheet": "A",
+            "normal_distance_A_tracing": 0.052959442138671875,
+            "normal_distance_B_tracing": 1.9470405578613281
+          },
+          "left_endpoint": {
+            "xyz_tracing": [
+              0.9160515069961548,
+              10.0,
+              11.99976921081543
+            ],
+            "xyz_native": [
+              2.3321030139923096,
+              20.5,
+              24.49953842163086
+            ],
+            "artificial_sheet": "B",
+            "normal_distance_A_tracing": 3.9997692108154297,
+            "normal_distance_B_tracing": 0.0002307891845703125
+          },
+          "right_endpoint": {
+            "xyz_tracing": [
+              62.49999237060547,
+              10.0,
+              8.052959442138672
+            ],
+            "xyz_native": [
+              125.49998474121094,
+              20.5,
+              16.605918884277344
+            ],
+            "artificial_sheet": "A",
+            "normal_distance_A_tracing": 0.052959442138671875,
+            "normal_distance_B_tracing": 1.9470405578613281
+          },
+          "artificial_B_tail_arc_tracing_vox": 0.0,
+          "family_segments": 83,
+          "family_invalid_segments": 0
+        }
+      ]
+    }
+  },
+  "gates": {
+    "CT_two_supported_carriers_all_columns": true,
+    "all_raw_finished_original_P_family_valid": true,
+    "all_branches_no_physical_switch_unknown_or_opposite_points": true,
+    "both_branches_longest_whole_curve_95pct_retained": true,
+    "branch_coverage_isolated": true,
+    "all_gates": true
+  },
+  "decision": "PASS",
+  "finished_utc": "2026-11-10T16:09:30.689005+00:00",
+  "worker_seconds": 4.618358466075733,
+  "peak_RSS_kib": 226908,
+  "source_sha256_after": {
+    "core.py": "1bd16ef7ef1156e0657b2db541290b76af22632102bd0d4742be7013707e0364",
+    "tracing.py": "b23618422a86dafd65049f2b9c8ef8edddabbfaaad4d883d1f90f7cafa61e839",
+    "prepare.py": "a9a9eef67c5070b5fb95705a054048bb899d46cffeb334611170e0b0d4eba254",
+    "storage.py": "866cdd2a4c6755c268b6688aa1dad5dbaa171361a645a247d8574013abcc4adf"
+  },
+  "configuration_searches": 0,
+  "scenario_changes": 0,
+  "source_changes": 0,
+  "algorithm_input_and_oracle_boundary": {
+    "CT_basin_algorithm": [
+      "original artificial native CT",
+      "fixed planar normal-Z domain",
+      "128 per-X profiles, each averaged across native Y"
+    ],
+    "tracer": [
+      "original V masked by CT-derived basin",
+      "original H 8/255",
+      "CT-specific prepared P/axes/centrality/seeds",
+      "separate branch coverage arrays"
+    ],
+    "final_score_only": [
+      "fixed parent PLAN artificial A/B centrelines; reconstruction checked equal to saved reference",
+      "saved original whole-curve comparison results"
+    ],
+    "CT_truth_labels_used_in_algorithm": 0
+  },
+  "normal_deviation_definition": "absolute normal-Z distance to own A/B reference interpolated at tracing X, multiplied by 2 for native voxels",
+  "combined_control_attribution": {
+    "measured_combination": [
+      "CT-basin masking of original V",
+      "branch-specific prepared fields",
+      "independent unchanged coverage arrays"
+    ],
+    "coverage_only_increment": "requires a separate actual-method control"
+  },
+  "provenance": {
+    "scientific_values": "one existing completed artificial CT control",
+    "public_runner": "tracer-ct-branch-control.py",
+    "migration_new_algorithm_runs": 0
+  },
+  "original_run_artifact_sha256": {
+    "plan.json": "2599df9e36ae205e90c3d73947d039e0e4d1b15702295dd6536c9abed6761c01",
+    "control.py": "eb0cdfec45a4e234fc3c185a43da142f095f271ae9ab8f60389358f6d616013a",
+    "ct-evidence.json": "f6fae5d05364ea79773c7239bc62976f4741d5de6ea7875390c981993a829402",
+    "ct-derived-fields.npz": "96ed998a77ba22243cad3fb0c704591c7607862bbe2bb784772018b0b1c42566",
+    "curves-and-labels.npz": "c947f07f2e6100da570a6d38f331c6231cc6f0309eaf1aec7227e3b348498e38",
+    "run-result.json": "9a40560d0ab8969eb73936b12f6a4413ffadc7c1c88005988a80418bc3fb58d7",
+    "assert-check.json": "4b6284548f21ac8d9779fcf23d68138b358b1a8d3ca725b75c6059d7ef3c8484"
+  }
+}

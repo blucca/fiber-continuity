@@ -80,7 +80,41 @@ sheet events and genuine branch controls. The earlier real-crop
 [pipeline study](whole-pipeline-spatial-validation.md) retains its original
 inputs, operating points, results and model-source record.
 
-## Reproduce
+## A CT-guided control keeps both layer identities
+
+On the same field, a fixed **normal-Z, two-resolved-peak** adapter reads only the
+artificial CT: mean across Y, `find_peaks(prominence=12, distance=2)`, plateau
+centers and the minimum valley between them. All 128 native X columns resolve
+two carriers; the lowest peak prominence is 25. It masks V to each CT basin,
+retains H, prepares each branch through the original tracer and uses separate
+coverage states. Artificial A/B references enter after tracing, for scoring.
+
+![Complete CT-guided A and B curves, with the original layer-changing path retained](tracer-ct-branch-control.svg)
+
+| CT branch output | Whole curves | Native arc voxels | Original-P invalid segments | Nearest-reference layer changes |
+| --- | ---: | ---: | ---: | ---: |
+| A raw | 1 | 125.028955 | 0 | 0 |
+| A finished | 1 | 124.633206 | 0 | 0 |
+| B raw | 1 | 124.976655 | 0 | 0 |
+| B finished | 1 | 124.641966 | 0 | 0 |
+
+All **322 segments across these four outputs** pass the original **unmasked**
+native/pooled family check. All 326 saved points retain their intended nearest
+A/B reference label; exact-distance ties define unknown in this score.
+Maximum normal-Z deviation is **0.696329 native voxels for A** and **0.363195
+for B**. Each whole arc exceeds **99.212983%** of both original unconstrained
+raw whole-curve arcs. These are descriptive length comparisons in this field.
+A finished is 0.103804 native voxels shorter than the original finished curve;
+B finished is 0.095044 shorter. The [full control readout](results/tracer-ct-branch-control.json)
+preserves every length residual, both seeds and the combination's attribution:
+**CT-basin P + branch-specific prepared fields + independent coverage**.
+The coverage-only increment belongs in a separate actual-method comparator.
+
+This control's domain is two CT-resolved carriers in the fixed normal-Z scene.
+The real-crop first gate adds actual V2/frame reproduction, curved carrier
+identity, known skips, genuine delamination and clean-long-fiber preservation.
+
+## Reproduce both steps
 
 Use Linux, Python 3.12 and NumPy 2.0.2 / SciPy 1.16.3 / Numba 0.60.0.
 From this repository:
@@ -91,6 +125,9 @@ git -C temp/tracer-bee checkout bee798f72751169065fe020d4ad02c52519c2d2b
 python -m pip install numpy==2.0.2 scipy==1.16.3 numba==0.60.0
 python research/tracer-sheet-contact-probe.py \
   --author-source temp/tracer-bee --output-dir temp/sheet-contact-probe
+python research/tracer-ct-branch-control.py \
+  --author-source temp/tracer-bee --scene-dir temp/sheet-contact-probe \
+  --output-dir temp/ct-branch-control
 ```
 
 The [single-file diagnostic](tracer-sheet-contact-probe.py) imports the external

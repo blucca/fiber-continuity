@@ -23,7 +23,7 @@ and complete positive/negative research history follow below.
 A [fixed artificial same-family contact probe](research/tracer-sheet-contact-probe.md)
 runs the pinned medial-ridge emitter: an A→B long trace passes all native family
 checks, then its raw coverage suppresses a prepared seed on A. The report keeps
-both complete curves, including the zero-coverage control's opposite-end layer jump.
+both complete curves, including the zero-coverage control's opposite-end layer jump. A CT-guided control on the same artificial field keeps both layer identities and long curves; its full readout and runnable adapter follow in the report.
 
 ## Prospective spatial validation — simpler matched-coverage operating point
 
