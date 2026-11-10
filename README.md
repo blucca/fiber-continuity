@@ -4,7 +4,42 @@
 
 The dynamic program jointly selects transverse positions along each existing fiber. It preserves topology, source IDs, endpoints and gap provenance, then uses the original native cleanup. A same-station pointwise control isolates the path-selection change.
 
-## Current result
+## Prospective spatial validation — simpler matched-coverage operating point
+
+**Use the original legacy spline/gap-MLP pipeline with native cleanup for
+matched-coverage long chains in these two prospective ROIs. Use current raw
+AFV for full-output coverage and absolute continuity. Fixed DP default upgrade
+stops.** The publicly preregistered
+whole-pipeline comparison uses a new s1 native 256 cube and a fixed centre
+crop of an s5 native 512 cube. Primary (DP-clean/current raw), companion
+(DP-clean/current clean) and DP-specific (DP-clean/legacy baseline) gates
+are independent.
+
+Radius-2 relative continuity changes at the frozen lower / upper whole-curve brackets:
+
+| ROI | Legacy-clean / current raw | DP-clean / current raw | DP-clean / current clean | DP-clean / legacy-clean |
+|---|---:|---:|---:|---:|
+| s1 | +1.65282% / +0.17769% | +1.00588% / -0.74768% | +3.01208% / +1.18880% | -2.20645% / -1.32129% |
+| s5 | +6.42627% / +6.06660% | +4.10436% / +2.81256% | +3.86900% / +2.58300% | -2.71637% / -2.71637% |
+
+Both legacy-baseline architecture gates pass. DP-clean's primary gate fails
+at the s1 upper bracket **−0.74768%**; the equally-cleaned companion passes.
+The DP-specific gate fails in both cases, with all four radius-2 brackets
+negative; its s1 radius-3 changes are **−3.60780% / −2.24525%**. All **21,977**
+legacy-clean segments and **35,799** segments in two new current-raw positive
+controls pass the unchanged native family validator, preserving original gaps.
+The fixed checkpoint has **18 training samples**, fold **0**; per-case training
+list/split membership is pending. Prospective scope is postprocessor/comparator
+parameter holdout and first reference performance in the two declared ROIs.
+
+[Full prospective report](research/whole-pipeline-spatial-validation.md) ·
+[All 40 matched / 16 full aggregate rows](research/whole-pipeline-spatial-results.json) ·
+[Immutable preregistration](https://raw.githubusercontent.com/blucca/fiber-continuity/bd4aac2b230094a898db52b8f1cbf12e9a6799e8/research/whole-pipeline-spatial-freeze.json).
+Fixed-model training membership and the new postprocessor parameter holdout
+are recorded separately. The earlier comparisons below retain their own
+source, comparator and time windows.
+
+## Earlier revealed two-case whole-pipeline benchmark
 
 **Choose the operating point for the downstream task.** The
 [complete legacy pipeline + fixed DP + native cleanup](research/whole-pipeline-comparison.md)
