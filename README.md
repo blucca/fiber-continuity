@@ -25,6 +25,11 @@ runs the pinned medial-ridge emitter: an A→B long trace passes all native fami
 checks, then its raw coverage suppresses a prepared seed on A. The report keeps
 both complete curves, including the zero-coverage control's opposite-end layer jump. A CT-guided control on the same artificial field keeps both layer identities and long curves; its full readout and runnable adapter follow in the report.
 
+A [native-CT normal companion](research/ct-normal-diagnostic.md) keeps the
+evidence axis independent of a suspect fiber tangent. One fixed benchmark
+transition shows a 28.165° departure and different peak observations under the
+two frame controls; the runnable primitive preserves the CT normal.
+
 ## Prospective spatial validation — simpler matched-coverage operating point
 
 **Use the original legacy spline/gap-MLP pipeline with native cleanup for

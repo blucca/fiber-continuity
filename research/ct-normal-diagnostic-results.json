@@ -1,0 +1,76 @@
+{
+  "study": "one fixed native CT normal diagnostic",
+  "input_scope": {
+    "benchmark": "R526 fixed s5 native 256-cube; original bee798f7 emitter and fiber_hz_vt checkpoint",
+    "selected_event": "first interior manual tree-ID switch in original current-raw radius-2 support order",
+    "original_full_manual_id_switch_count": 8,
+    "event_selection_count": 1,
+    "physical_leaf_or_lamina_labels": 0,
+    "genuine_delamination_controls": 0,
+    "actual_V2_runner_inputs": 0
+  },
+  "parameters": {
+    "derivative_sigma_native_vox": 1,
+    "integration_sigma_native_vox": 3,
+    "tensor_patch_shape_zyx": [
+      33,
+      33,
+      33
+    ],
+    "profile_normal_step_native_vox": 0.5,
+    "profile_normal_extent_native_vox": 16,
+    "profile_inplane_mean_halfwidth_vox": 4,
+    "profile_peak_prominence_gray": 1,
+    "profile_peak_min_distance_vox": 2
+  },
+  "rows": [
+    {
+      "station": "before_transition",
+      "ct_tensor_largest_over_middle_eigenvalue": 12.155717879576432,
+      "ct_normal_component_of_baseline_tangent": 0.045060517803383125,
+      "baseline_departure_from_local_ct_tangent_plane_degrees": 2.5826519872039313,
+      "ct_peaks_with_fiber_transverse_normal": 3,
+      "ct_peaks_with_independent_ct_normal": 3,
+      "fiber_transverse_plane_inside_samples": 4176,
+      "ct_normal_plane_inside_samples": 4173,
+      "all_plane_samples": 4225
+    },
+    {
+      "station": "transition_midpoint",
+      "ct_tensor_largest_over_middle_eigenvalue": 7.140897176839424,
+      "ct_normal_component_of_baseline_tangent": 0.47201833088213885,
+      "baseline_departure_from_local_ct_tangent_plane_degrees": 28.16539071460063,
+      "ct_peaks_with_fiber_transverse_normal": 2,
+      "ct_peaks_with_independent_ct_normal": 4,
+      "fiber_transverse_plane_inside_samples": 4225,
+      "ct_normal_plane_inside_samples": 4225,
+      "all_plane_samples": 4225
+    },
+    {
+      "station": "after_transition",
+      "ct_tensor_largest_over_middle_eigenvalue": 4.193208092204545,
+      "ct_normal_component_of_baseline_tangent": 0.12187284393948135,
+      "baseline_departure_from_local_ct_tangent_plane_degrees": 7.000202072101601,
+      "ct_peaks_with_fiber_transverse_normal": 3,
+      "ct_peaks_with_independent_ct_normal": 2,
+      "fiber_transverse_plane_inside_samples": 4225,
+      "ct_normal_plane_inside_samples": 4225,
+      "all_plane_samples": 4225
+    }
+  ],
+  "execution": {
+    "support_component_calls_all_attempts": 1,
+    "coverage_calls": 0,
+    "geometry_edits": 0,
+    "automatic_repairs": 0,
+    "model_inferences": 0,
+    "parameter_searches": 0,
+    "ct_tensor_control_recalculations": 0,
+    "first_ct_probe_seconds": 1.054186858003959,
+    "ct_only_normal_control_seconds": 0.6838504569604993,
+    "public_source_port_stations": 3,
+    "public_source_port_normal_max_difference": 0.0,
+    "public_source_port_eigenvalues_exact": true
+  },
+  "interpretation": "CT normal is an independent intensity orientation. Frame construction changes observed candidate peaks. Physical branch correspondence, correct successor and delamination preservation require the actual task materials."
+}

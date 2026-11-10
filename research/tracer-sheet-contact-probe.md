@@ -139,3 +139,10 @@ Use the same command with `--check` to check saved outputs without tracing again
 
 Original tracer: **Qualzz**, Apache-2.0, kept in its external checkout.
 Artificial fields, diagnostic caller and readout: **Blucca / Codex**.
+
+## Native CT normal companion
+
+The [fixed real-CT diagnostic](ct-normal-diagnostic.md) measures the independent
+CT normal alongside the suspect fiber tangent at one original benchmark event.
+It retains original geometry and records both frame controls; anchored physical
+branch identity and true-delamination preservation follow the actual task gate.
