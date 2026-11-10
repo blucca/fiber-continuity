@@ -1,6 +1,6 @@
 # Persistent-ridge ownership: an explicit negative control
 
-The selected method remains **mature MLP polylines → bounded-logit + CT recenter → pinned native cleanup**. `bounded_logit_recenter.py` and its probability/geometry settings retain the original public freeze `f88e8894fa7dad1a56f670796f893a6793618faa`.
+The primary at this source freeze was **mature MLP polylines → bounded-logit + CT recenter → pinned native cleanup**. `bounded_logit_recenter.py` and its probability/geometry settings retain the original public freeze `f88e8894fa7dad1a56f670796f893a6793618faa`.
 
 ## What the existing switch observations measure
 
@@ -35,4 +35,8 @@ Two extra 256³ cubes were selected by official ZIP filenames:
 - `s1_10997_02997_02997_256`
 - `s5_14997_01497_01497_256`
 
-Their CT/NML/frame intake, the same pinned pretrained inference adapter, mature t60 MLP baseline and CT-recenter geometry are complete. These are new spatial heldouts for this postprocessor; pretrained-model training membership retains its own provenance. This note precedes their first reference-based coverage/connectivity measurement. Primary is the unchanged CT method; the ownership guard is a full negative control. Radius2, native cleanup45°/min100/black16, whole-curve common-coverage brackets, and the same-prefix radius3 sensitivity retain the existing evaluator contract.
+Their CT/NML/frame intake, the same pinned pretrained inference adapter, mature t60 MLP baseline and CT-recenter geometry are complete. These are new spatial heldouts for this postprocessor; pretrained-model training membership retains its own provenance. This note was first published before their first reference-based coverage/connectivity measurement. Primary is the unchanged CT method; the ownership guard is a full negative control. Radius2, native cleanup45°/min100/black16, whole-curve common-coverage brackets, and the same-prefix radius3 sensitivity retain the existing evaluator contract.
+
+## Frozen validation is complete
+
+[Four-cube validation](four-cube-validation.md) contains the two new spatial results and the full control. The guard restored one of744 new raw curves; observed switch counts remain level. The primary CT centering loses radius2 matched continuity on both new cubes. Its default upgrade promotion is stopped; future direct continuous-path work uses new development/holdout boundaries.

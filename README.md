@@ -14,10 +14,13 @@ tracks the measured behavior of a short-junction probe. The [incoming-direction 
 
 The [bounded-logit study](research/bounded-logit-study.md) records the frozen
 fixed-topology method and its completed first s1 postprocessor holdout. Native
-cleanup is required: clean radius 2 matched continuity improves, while raw
-observed switches increase. The [overlap-ownership study](research/overlap-ownership-study.md)
+cleanup is included: the first two cubes improve clean radius2 matched continuity, while the first s1 raw switches increase. [Four-cube validation](research/four-cube-validation.md) records two subsequent spatial-heldout failures; default centering-upgrade promotion is stopped. The [overlap-ownership study](research/overlap-ownership-study.md)
 records geometry-only ranking, emitted-reverse scope and the complete native
 augmentation side-study results.
+
+## Native typed object handoff
+
+[`native_v4_store`](native/README.md) converts native V4 polyline JSON into a checked `.vcobj`, then closes/reopens it and verifies immutable typed fiber loads and volume-frame identity. The pinned native library passed both real baseline/CT trace archives and the included all-synthetic fixture. The small C++ CLI uses the existing native targets with the Python/server stack disabled.
 
 ## Run in minutes
 
@@ -175,4 +178,4 @@ annotations and upstream models/methods are credited to their original authors.
 
 ### Additional spatial validation
 
-[Ownership safety study and validation freeze](research/ownership-safety-study.md): the unchanged CT method is primary on two extra spatial cubes. A complete persistent-marker guard produced 0 fallbacks on the two revealed development cubes and is retained as a negative control. The new reference-based results will be appended after the predeclared comparison.
+[Ownership safety study and validation freeze](research/ownership-safety-study.md): the unchanged CT method was frozen as primary for two extra spatial cubes. A complete persistent-marker guard produced 0 fallbacks on the two revealed development cubes and is retained as a negative control. [The complete results](research/four-cube-validation.md) record radius2 matched-continuity failures on both new spatial cubes. Native typed object handoff has passed independently.

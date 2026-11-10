@@ -1,0 +1,13 @@
+{
+  "closed_reopen": "passed",
+  "fiber_count": 2,
+  "format_roundtrip": "passed",
+  "immutable_typed_load": "passed",
+  "max_native_frame_abs_error_vox": 0.0,
+  "native_v4_codec": "passed",
+  "point_count": 7,
+  "points_order_control_IDs_source_metadata": "preserved",
+  "source_pin": "c3d9da6fe42c3bb46fd2603ca060845d843296c3",
+  "fixture": "fixture.json",
+  "fixture_entirely_synthetic": true
+}
