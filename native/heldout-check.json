@@ -1,0 +1,55 @@
+{
+  "status": "complete",
+  "format_roundtrip": "passed",
+  "source_pin": "c3d9da6fe42c3bb46fd2603ca060845d843296c3",
+  "freeze_commit": "1afa30ab840f7606f0b6594213731c5a88202c61",
+  "case": "s1_08997_02997_02497_256",
+  "volume_id": "20230205180739",
+  "origin_xyz": [
+    2497.0,
+    2997.0,
+    8997.0
+  ],
+  "scale_factor": 1,
+  "voxel_size_um": [
+    7.91,
+    7.91,
+    7.91
+  ],
+  "prepared_v4_parser_roundtrip": "passed",
+  "point_ID_order_gap_frame_parity": "passed",
+  "native_materialize_runs": 0,
+  "surface_runs": 0,
+  "checks": [
+    {
+      "closed_reopen": "passed",
+      "fiber_count": 78,
+      "format_roundtrip": "passed",
+      "immutable_typed_load": "passed",
+      "max_native_frame_abs_error_vox": 0.0,
+      "native_v4_codec": "passed",
+      "point_count": 4379,
+      "points_order_control_IDs_source_metadata": "preserved",
+      "source_label": "baseline-clean",
+      "source_stage": "extended-clean-default",
+      "global_translation_max_length_error_vox": 1.7053025658242404e-13,
+      "ObjectFrame_float32_max_abs_vox": 0.00048828125,
+      "gap_curve_count": 8
+    },
+    {
+      "closed_reopen": "passed",
+      "fiber_count": 79,
+      "format_roundtrip": "passed",
+      "immutable_typed_load": "passed",
+      "max_native_frame_abs_error_vox": 0.0,
+      "native_v4_codec": "passed",
+      "point_count": 5168,
+      "points_order_control_IDs_source_metadata": "preserved",
+      "source_label": "dp-clean",
+      "source_stage": "continuous-centre-path-dp-native-clean",
+      "global_translation_max_length_error_vox": 7.958078640513122e-13,
+      "ObjectFrame_float32_max_abs_vox": 0.00048828125,
+      "gap_curve_count": 8
+    }
+  ]
+}

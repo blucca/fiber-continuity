@@ -1,28 +1,29 @@
 # Fiber Continuity
 
-**Annotation-aware evaluation for papyrus fiber traces:** measure recovered manual
-fiber length, sustained tree-ID switches, and same-chain continuity together.
+**Continuous center paths for papyrus fibers:** a bounded CT + fixed-model path optimizer, measured against the mature spline pipeline on original manual graphs.
 
-Original WEBKNOSSOS tree IDs, nodes, edges, degree-3 branches, zero-length graph
-edges, and partial annotations stay intact. A tracer can cover a fiber with many
-fragments; the continuity column makes that fragmentation visible alongside
-coverage and observed connection errors.
+The dynamic program jointly selects transverse positions along each existing fiber. It preserves topology, source IDs, endpoints and gap provenance, then uses the original native cleanup. A same-station pointwise control isolates the path-selection change.
 
-Built around repeatable fixed-model spline measurements and original manual
-graphs. The [centerline-preservation study](research/centerline-preservation.md)
-tracks the measured behavior of a short-junction probe. The [incoming-direction study](research/incoming-direction-study.md) adds bounded CT recentering, a reverse-flow gate and a complete development augmentation.
+## Current result
 
-The [bounded-logit study](research/bounded-logit-study.md) records the frozen
-fixed-topology method and its completed first s1 postprocessor holdout. Native
-cleanup is included: the first two cubes improve clean radius2 matched continuity, while the first s1 raw switches increase. [Four-cube validation](research/four-cube-validation.md) records two subsequent spatial-heldout failures; default centering-upgrade promotion is stopped. The [overlap-ownership study](research/overlap-ownership-study.md)
-records geometry-only ranking, emitted-reverse scope and the complete native
-augmentation side-study results.
+After an [immutable source/parameter freeze](https://github.com/blucca/fiber-continuity/tree/1afa30ab840f7606f0b6594213731c5a88202c61), two fresh spatial parameter-heldout cubes pass the published native-clean radius 2 gate:
 
-The [continuous centre-path study](research/continuous-centre-path-study.md) freezes an exact finite-state path optimizer with a same-station pointwise control. Complete four-cube development comparisons and executable geometry are public; three cubes improve radius2 continuity and one decreases it. New spatial validation follows the published clean-stage gate.
+| Scroll / cube | Matched-lower same-chain continuity gain | Observed interior switches DP / baseline |
+|---|---:|---:|
+| s1 / `08997_02997_02497` | **+5.581%** | 1 / 1 |
+| s5 / `07997_02997_05497` | **+0.939%** | 0 / 0 |
+
+Upper-bracket gains are +5.581% / +3.029%. Boundary switches are 0 in both methods. Radius 3 sensitivity increases in s1 and decreases in s5. The preceding four development cubes include three positive and one negative radius 2 result.
+
+- [Complete fresh validation: full/matched, raw/clean, both radii, controls](research/continuous-path-spatial-validation.md).
+- [Method, fixed parameters and executable CT/P/traces command](research/continuous-centre-path-study.md).
+- [Annotation-aware evaluator](contract.md): coverage, sustained tree-ID switches, same-chain continuity, unknown and ambiguous arcs are separate measurements. Original nodes, edges and branches stay intact.
+
+The measured scope is fixed-model centering after native cleanup on partial manual references. Whole-volume deployment and surface-quality stages follow their own downstream measurements.
 
 ## Native typed object handoff
 
-[`native_v4_store`](native/README.md) converts native V4 polyline JSON into a checked `.vcobj`, then closes/reopens it and verifies immutable typed fiber loads and volume-frame identity. The pinned native library passed both real baseline/CT trace archives and the included all-synthetic fixture. The small C++ CLI uses the existing native targets with the Python/server stack disabled.
+[`native_v4_store`](native/README.md) converts native V4 polyline JSON into a checked `.vcobj`, closes/read-only reopens it, and verifies immutable typed fiber loads and volume-frame identity. The pinned native library passed the all-synthetic fixture and real trace archives, including the fresh s1 baseline (78 curves) and DP (79 curves). [Aggregate fresh native check](native/heldout-check.json). The small C++ CLI uses the existing native targets with the Python/server stack disabled.
 
 ## Run in minutes
 
@@ -147,7 +148,7 @@ coverage and continuity decrease; full, matched, unknown and ambiguous totals
 are in the [complete study](research/bounded-logit-study.md#first-s1-postprocessor-parameter-holdout).
 The pretrained model's 18 training cases and their original membership remain
 separate provenance; the heldout protocol concerns the postprocessor parameters.
-Historical research notes retain their publication snapshots. Native VC3D replay
+Historical research notes retain their publication snapshots. Native VC3D UI replay
 is a separate protocol; its execution count here is 0.
 
 ## Version, data license and attribution
@@ -178,6 +179,8 @@ X-ray CT.* [arXiv:2304.02084](https://arxiv.org/abs/2304.02084).
 Research code authored by Codex; repository maintained by blucca. Manual fiber
 annotations and upstream models/methods are credited to their original authors.
 
-### Additional spatial validation
+### Earlier method archive
 
 [Ownership safety study and validation freeze](research/ownership-safety-study.md): the unchanged CT method was frozen as primary for two extra spatial cubes. A complete persistent-marker guard produced 0 fallbacks on the two revealed development cubes and is retained as a negative control. [The complete results](research/four-cube-validation.md) record radius2 matched-continuity failures on both new spatial cubes. Native typed object handoff has passed independently.
+
+Earlier method snapshots: [short-junction probe](research/centerline-preservation.md), [incoming direction / reverse-flow](research/incoming-direction-study.md), [bounded-logit centering](research/bounded-logit-study.md), [overlap ownership / native augmentation](research/overlap-ownership-study.md). The earlier Gaussian method retains its two extra-cube failures; default upgrade promotion for that method is stopped.
