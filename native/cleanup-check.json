@@ -1,0 +1,56 @@
+{
+  "status": "passed",
+  "scope": "thin public CLI reproduction of the measured native-clean endpoint; geometry stays private",
+  "synthetic": {
+    "status": "passed",
+    "fixture": "entirely synthetic",
+    "checks": [
+      "45-degree sharp-gap cut",
+      "100-voxel minimum length",
+      "16-voxel exterior-black rejection",
+      "gap pins and remapping",
+      "V/H native mapping",
+      "source IDs and fallback",
+      "envelope metadata and local origin0"
+    ],
+    "input_curve_count": 5,
+    "curve_count": 2,
+    "point_count": 6
+  },
+  "real_case": {
+    "case": "s1_08997_02997_02497_256",
+    "cli_returncode": 0,
+    "complete_clean_envelope_exact": true,
+    "curve_count": 79,
+    "point_count": 5168,
+    "points_ID_order_gaps_family_metadata_exact": true,
+    "max_point_abs_difference_vox": 0.0,
+    "comparison": "same measured pinned-cleanup endpoint, same CT/raw envelope",
+    "summary": {
+      "input_curve_count": 333,
+      "curve_count": 79,
+      "point_count": 5168,
+      "length_voxels": 14476.642924349842,
+      "exterior_black_all_zero_cells": 0,
+      "exterior_black_any_zero_cells": 24,
+      "native_source_pin": "c3d9da6fe42c3bb46fd2603ca060845d843296c3",
+      "cleanup_source_sha256": "5216159a9b81d03867710c51fdc29c0a8ecd7e93f43d6fb7daaeec466fed1024",
+      "primitive_backend": "SciPy default 6-connected hole fill; radius-one cube morphology, border0",
+      "max_join_angle_degrees": 45.0,
+      "min_length_voxels": 100.0,
+      "black_distance_voxels": 16.0,
+      "ct_local_origin_xyz": [
+        0,
+        0,
+        0
+      ]
+    },
+    "elapsed_seconds": 9.770679473003838,
+    "maxrss_kib": 114788,
+    "finished_utc": "2026-11-10T03:30:02.113456+00:00"
+  },
+  "new_model_DP_reference_metric_runs": 0,
+  "native_cut_thin_source_pin": "c3d9da6fe42c3bb46fd2603ca060845d843296c3",
+  "backend_scope": "original pinned cleanup.py with the same measured SciPy ExteriorBlack primitive operations",
+  "native_typed_write_check": "separate heldout-check.json and conversion-check.json"
+}

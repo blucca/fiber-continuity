@@ -38,6 +38,22 @@ control IDs, source metadata, family, length and frame binding. An existing
 output path stops the command. MIT applies to this wrapper and fixture; native
 source retains its own licenses.
 
+## Measured cleanup endpoint
+
+`research/run_centre_path.py` emits raw ROI-local curves. The thin command below reproduces the measured clean endpoint from that envelope and the same uint8 ZYX CT block. It loads only the pinned upstream `cleanup.py`; NumPy and SciPy supply the measured exterior-black hole-fill and cube-morphology operations. Fixed settings are 45 degrees, 100-voxel minimum length and 16-voxel black distance, at local origin 0.
+
+```sh
+python -m pip install numpy scipy
+python native/check-clean-traces.py \
+  --vesuvius-src /path/to/pinned/villa/vesuvius/src
+python native/clean_traces.py \
+  --vesuvius-src /path/to/pinned/villa/vesuvius/src \
+  --ct data/ct.npy --traces temp/centre-path/dp-raw.json \
+  --output temp/centre-path/dp-clean.json
+```
+
+[The cleanup check](cleanup-check.json) separates the entirely synthetic contract fixture from exact reproduction of the already measured fresh s1 clean envelope. The command keeps source IDs, gap annotations and native V/H family mapping. Its output feeds the V4 converter below; add the ROI origin in that conversion step.
+
 ## From a measured trace envelope
 
 The Python standard-library converter bridges this repository's ROI-local XYZ `curves` envelopes to the native V4 input above. Use the cleaned output for the measured native-clean endpoint. Storage scale is fixed at 1; supply the actual volume's `metadata.json` `id` and the ROI origin in XYZ order. Voxel size is descriptive metadata.

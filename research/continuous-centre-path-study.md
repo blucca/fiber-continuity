@@ -40,7 +40,19 @@ python evaluate.py --reference data/reference.json \
   --output temp/centre-path/dp-raw.metrics-r2.json
 ```
 
-The command writes both `dp-raw.json` and `pointwise-raw.json`, plus aggregate diagnostics. For native cleanup, use the pinned upstream `vesuvius.fiber_spline_generator.cleanup.clean` with max_angle45/min_length100 and `ExteriorBlack` constructed from the same CT block at local origin0; black_distance16. Map `V/H` to native family0/1 and preserve source IDs and gaps. Evaluate the resulting clean envelope with the same reference and compare lower/upper coverage brackets. The [ROI-local envelope → native V4 → .vcobj commands](../native/README.md#from-a-measured-trace-envelope) provide the standard object handoff after cleanup. Baseline/model and float-export reproduction are linked in [README](../README.md) and [float input reproduction](float-input-reproduction.md).
+The command writes both `dp-raw.json` and `pointwise-raw.json`, plus aggregate diagnostics. Execute the measured cleanup using the existing pinned checkout:
+
+```bash
+python native/clean_traces.py \
+  --vesuvius-src /path/to/pinned/villa/vesuvius/src \
+  --ct data/ct.npy --traces temp/centre-path/dp-raw.json \
+  --output temp/centre-path/dp-clean.json
+python evaluate.py --reference data/reference.json \
+  --traces temp/centre-path/dp-clean.json --radius 2 \
+  --output temp/centre-path/dp-clean.metrics-r2.json
+```
+
+This thin command loads the original pinned cut/thin source, with the measured SciPy hole-fill/cube-morphology backend for `ExteriorBlack`. It fixes max_angle45/min_length100/black_distance16 and uses the same CT block at local origin0, maps `V/H` to native family0/1, and preserves source IDs and gaps. [Synthetic and fresh-case cleanup checks](../native/cleanup-check.json) describe the exact endpoint parity. Compare lower/upper coverage brackets with the same reference. The [ROI-local envelope → native V4 → .vcobj commands](../native/README.md#from-a-measured-trace-envelope) add the ROI origin once for the standard object handoff. Baseline/model and float-export reproduction are linked in [README](../README.md) and [float input reproduction](float-input-reproduction.md).
 
 ## Frozen first new-spatial validation
 
