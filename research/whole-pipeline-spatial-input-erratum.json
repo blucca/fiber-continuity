@@ -1,0 +1,52 @@
+{
+  "version": 1,
+  "recorded_utc": "2026-11-10T12:37:23.876459+00:00",
+  "scope": "Source-mask frame preflight semantic correction, before any new prediction or reference performance",
+  "original_freeze": "bd4aac2b230094a898db52b8f1cbf12e9a6799e8",
+  "original_attempt": {
+    "terminal": "stopped at all-node source-mask QA",
+    "s1_source_frame": "passed",
+    "s5_source_full_cube_shape_and_scale": "passed",
+    "s5_crop_generated": false,
+    "paired_input_ready": false,
+    "model_submissions": 0,
+    "geometry_runs": 0,
+    "reference_performance_runs": 0
+  },
+  "observations": {
+    "s5_source_inside_nodes": 15610,
+    "correct_ZYX_rint_supported_nodes": 15609,
+    "correct_ZYX_floor_supported_nodes": 15609,
+    "XYZ_as_ZYX_supported_nodes": 310,
+    "missed_nodes": 1,
+    "missed_node_edge_degree": 0,
+    "missed_node_radius1_has_mask": false,
+    "missed_node_boundary_distance_gt2": true,
+    "edge_bearing_inside_nodes": 15609,
+    "edge_bearing_supported_nodes": 15609
+  },
+  "source_semantics": {
+    "source": "https://github.com/ScrollPrize/villa/blob/c3d9da6fe42c3bb46fd2603ca060845d843296c3/foundation/datasets/fibers-dataset/fibers-dataset-generator.py",
+    "function": "voxelize_skeleton",
+    "lines": [
+      34,
+      81
+    ],
+    "label_seeds": "The two seed loops iterate tree.edges. A degree-zero node emits zero label voxels. Coordinates are cast to int and the final grid is transposed XYZ to ZYX."
+  },
+  "corrected_preflight": "Retain every original NML node, ID, edge, branch and original Full Cube. Sample the binary edge mask at all original inside nodes participating in at least one original edge; require 100% support. Count isolated nodes separately without removing them from the reference graph. Apply this one rule to both source-full-cube and declared sub-ROI checks.",
+  "resumption": "Resume exactly the original two selected sources and fixed centre crop after this immutable clarification is accepted, then after corrected input preflight passes. All geometry outputs must be terminal before the first postprocessor/reference-performance measurement.",
+  "changes": {
+    "data_selection": 0,
+    "crop_selection": 0,
+    "model_identity": 0,
+    "predictor_parameters": 0,
+    "DP_parameters": 0,
+    "cleanup_parameters": 0,
+    "evaluator": 0,
+    "matching_protocol": 0,
+    "original_reference_graph_deletions": 0,
+    "QA_support_percentage_threshold": 0
+  },
+  "retained_protocol": "Original fixed source pins, 40 matched / 16 unique full rows, primary/companion/DP-specific/native gates and complete negative results remain unchanged. The original failed attempt is retained independently."
+}
